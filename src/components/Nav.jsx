@@ -22,8 +22,8 @@ const Nav = () => {
             scrollSection: "skillsSection"
         },
         {
-            name: "Portfolio",
-            pathName: "/portfolio",
+            name: "projects",
+            pathName: "/projects",
             scrollSection: "projectSection"
         },
         {
@@ -37,7 +37,7 @@ const Nav = () => {
         <div>
             <ul className="flex gap-3">
                 {
-                    links.map((i, idx) => <li key={idx}><Link className={`font-medium hover:text-primaryColor 
+                    links.map((i, idx) => <li key={idx}><Link className={`font-medium hover:text-primaryColor capitalize
                         ${i.pathName === pathName && "text-primaryColor border-b border-b-primaryColor"} `} href={i.pathName}>{i.name}</Link></li>)
                 }
             </ul>

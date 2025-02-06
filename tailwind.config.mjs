@@ -10,7 +10,8 @@
   	extend: {
   		colors:{
 			  background: "#1E1E1E",
-			  primaryColor: "#00FF00",
+			primary: "#3d3d3d",
+			accent: "#00FF00",
 			textColor: "#CCCCCC "
 		},
   		borderRadius: {
