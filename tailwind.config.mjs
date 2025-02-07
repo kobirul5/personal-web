@@ -11,7 +11,7 @@
   		colors:{
 			background: "#1E1E1E",
 			primary: "#3d3d3d",
-			primaryColor: "#00FF00",
+			primaryColor: "#ff6421",
 			accent: "#00FF00",
 			textColor: "#CCCCCC "
 		},
