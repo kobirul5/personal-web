@@ -12,13 +12,12 @@ const buttonVariants = cva(
         default:
           "bg-primaryColor text-background  hover:bg-primaryColor/90",
           primary: "bg-primaryColor text-textColor",
-          outline: "border border-primaryColor bg-primaryColor text-textColor  hover:bg-primaryColor/90"
+          outline: "border border-primaryColor text-primaryColor hover:text-textColor hover:bg-primaryColor/90"
       },
       size: {
-        default: "h-9 px-4 py-2",
-        sm: "h-8 rounded-md px-3 text-xs",
-        lg: "h-10 rounded-md px-8",
-        icon: "h-9 w-9",
+        default: "h-[48px] px-6",
+        md: "h-[48px] px-6",
+        lg: "h-[48px] px-8 text-sm uppercase tracking-[2px]",
       },
     },
     defaultVariants: {
