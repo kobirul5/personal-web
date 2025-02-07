@@ -2,6 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import PageTransition from "@/components/PageTransition";
+import StairTransition from "@/components/StairTransition";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,6 +26,7 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-textColor`}
       >
         <Header></Header>
+        <StairTransition/>
         <PageTransition>
         {children}
         </PageTransition>

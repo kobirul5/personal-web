@@ -9,8 +9,9 @@
   theme: {
   	extend: {
   		colors:{
-			  background: "#1E1E1E",
+			background: "#1E1E1E",
 			primary: "#3d3d3d",
+			primaryColor: "#00FF00",
 			accent: "#00FF00",
 			textColor: "#CCCCCC "
 		},
