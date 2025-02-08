@@ -3,6 +3,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .text-outline {
+    -webkit-text-stroke: 2px whitesmoke;
+  }
+}
+
 .jetbrains-mono {
     font-family: "JetBrains Mono", serif;
     font-optical-sizing: auto;
