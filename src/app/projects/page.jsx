@@ -97,8 +97,15 @@ export default function Projects() {
       animate={{ opacity: 1 }}
       className="min-h-[80vh] flex flex-col justify-center py-12 lg:py-0"
     >
-      <div className="flex flex-col lg:flex-row lg:gap-8 ">
-        <div className="w-full lg:w-1/2 lg:h-[468px] order-2 lg:order-none">
+      <motion.div 
+      initial={{ opacity: 0 }}
+      animate={{
+        opacity: 1,
+        transition: { delay: 2, duration: 0.4, ease: "easeIn" }
+
+    }}
+      className="flex flex-col lg:flex-row lg:gap-8 ">
+        <motion.div className="w-full lg:w-1/2 lg:h-[468px] order-2 lg:order-none">
           <div className="flex flex-col gap-6">
             {/* outline num ? */}
             <div className="text-8xl leading-none text-transparent text-outline font-extrabold  text-outline ">0{project?.id}</div>
@@ -120,7 +127,7 @@ export default function Projects() {
 
             </div>
           </div>
-        </div>
+        </motion.div>
 
 
         <motion.div
@@ -157,7 +164,7 @@ export default function Projects() {
             <SwiperProjectBtns containerStyle={"flex gap-2 absolute right-0 top-1/2 justify-between  lg:justify-end z-20 w-full lg:top-[470px] "} btnStyle={"text-5xl bg-primaryColor text-background"} />
           </Swiper>
         </motion.div>
-      </div>
+      </motion.div>
     </motion.section>
   )
 }

@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`jetbrains-mono px-5 antialiased bg-background text-textColor`}
+        className={`jetbrains-mono antialiased bg-background text-textColor`}
       >
         <Header></Header>
         <StairTransition/>
