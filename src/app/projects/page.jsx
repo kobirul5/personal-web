@@ -6,8 +6,10 @@ import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import 'swiper/css';
 import { useState } from "react";
+import Image from "next/image";
+import SwiperProjectBtns from "@/components/ui/SwiperProjectBtns";
 export default function Projects() {
-  
+
   const projects = [
     {
       id: 1,
@@ -84,61 +86,77 @@ export default function Projects() {
     }
   ];
   const [project, setProject] = useState(projects[0])
-  const handleChange = (swiper)=>{
+  const handleChange = (swiper) => {
     const currentIndex = swiper.activeIndex;
     setProject(projects[currentIndex])
   }
 
   return (
     <motion.section
-    initial={{opacity: 0}}
-    animate={{opacity:1}}
-    className="min-h-[80vh] flex flex-col justify-center py-12 lg:py-0"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      className="min-h-[80vh] flex flex-col justify-center py-12 lg:py-0"
     >
       <div className="flex flex-col lg:flex-row lg:gap-8 ">
         <div className="w-full lg:w-1/2 lg:h-[468px] order-2 lg:order-none">
           <div className="flex flex-col gap-6">
             {/* outline num ? */}
-              <div className="text-8xl leading-none text-transparent text-outline font-extrabold  text-outline ">01</div>
-              <h1 className="text-3xl font-bold">{project?.title}</h1>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut exercitationem ab in dolorum quam obcaecati, eveniet earum facere quaerat animi!</p>
-              {/* button */}
-              <div className="flex items-center gap-4">
-                {/* live link */}
-                <Link href={""}>
-                  <TooltipProvider delayDuration={100}>
-                    <Tooltip>
-                      <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group ">
+            <div className="text-8xl leading-none text-transparent text-outline font-extrabold  text-outline ">0{project?.id}</div>
+            <h1 className="text-3xl font-bold">{project?.title}</h1>
+            <p>{project?.description}</p>
+            {/* button */}
+            <div className="flex items-center gap-4">
+              {/* live link */}
+              <Link href={""}>
+                <TooltipProvider delayDuration={100}>
+                  <Tooltip>
+                    <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group ">
                       Live Link
-      
-                      </TooltipTrigger>
-                    </Tooltip>
-                  </TooltipProvider>
-                </Link>
-                
-              </div>
+
+                    </TooltipTrigger>
+                  </Tooltip>
+                </TooltipProvider>
+              </Link>
+
+            </div>
           </div>
         </div>
 
 
-        <div className="lg:w-1/2">
-          <Swiper 
-          spaceBetween={30}
-          slidesPerView={1}
-          className="lg:h-[520px]"
-          onSlideChange={handleChange}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{
+              opacity: 1,
+              transition: { delay: 2, duration: 0.4, ease: "easeIn" }
+
+          }}
+          className="lg:w-1/2 z-10">
+          <Swiper
+            spaceBetween={30}
+            slidesPerView={1}
+            className="lg:h-[520px]"
+            onSlideChange={handleChange}
           >
             {
-              projects.map((project, index)=>{
+              projects.map((project, index) => {
                 return (
                   <SwiperSlide key={index}>
-                    <div className="h-[460px] relative flex justify-center items-center bg-pink-50/20 "></div>
+                    <div className="h-[450px] z-20 relative flex justify-center items-center bg-pink-50/20 ">
+                      {/* overlay */}
+                      <div></div>
+                      <div className="relative w-full h-full object-cover ">
+                        <Image src={project?.image} fill  alt="project" />
+                      </div>
+                    </div>
                   </SwiperSlide>
                 )
               })
             }
+
+            {/* wiper btn */}
+            <SwiperProjectBtns containerStyle={"flex gap-2 absolute right-0 top-1/2 justify-between  lg:justify-end z-20 w-full lg:top-[470px] "} btnStyle={"text-5xl bg-primaryColor text-background"} />
           </Swiper>
-        </div>
+        </motion.div>
       </div>
     </motion.section>
   )
