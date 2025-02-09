@@ -1,6 +1,9 @@
+import MySkills from "../components/MySkills";
 
 export default function Skills() {
   return (
-    <div>Skills</div>
+    <div>
+      <MySkills></MySkills>
+    </div>
   )
 }

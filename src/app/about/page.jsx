@@ -2,6 +2,7 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { motion } from "motion/react";
 import { ScrollArea } from "@/components/ui/scroll-area";
+import MySkills from "../components/MySkills";
 export default function About() {
 
 
@@ -25,21 +26,7 @@ export default function About() {
       institution: "Chor-Khokshabari High School",
       location: "Sirajganj, Bangladesh",
       duration: '2016 - 2028',
-      grade: "4.58/5.00",
-    },
-    {
-      degree: "SSC",
-      institution: "Chor-Khokshabari High School",
-      location: "Sirajganj, Bangladesh",
-      duration: '2016 - 2028',
-      grade: "4.58/5.00",
-    },
-    {
-      degree: "SSC",
-      institution: "Chor-Khokshabari High School",
-      location: "Sirajganj, Bangladesh",
-      duration: '2016 - 2028',
-      grade: "4.58/5.00",
+      grade: "4.39/5.00",
     },
   ]
 
@@ -50,7 +37,7 @@ export default function About() {
         opacity: 1,
         transition: { delay: 2.4, duration: 0.4, ease: "easeIn" }
       }}
-      className="min-h-[80vh] flex items-center py-12 lg:py-0"
+      className="min-h-[80vh] container mx-auto flex items-center py-12 lg:py-0"
     >
       <div className="container mx-auto">
         <Tabs
@@ -67,14 +54,16 @@ export default function About() {
             {/* about */}
             <TabsContent value="about-me" className="w-full">About Me</TabsContent>
             {/* Skills */}
-            <TabsContent value="skills" className="w-full">Skills</TabsContent>
+            <TabsContent value="skills" className="w-full">
+              <MySkills/>
+            </TabsContent>
             {/* education */}
             <TabsContent value="education" className="w-full">
               <div>
-                <h1 className="text-4xl">My Education</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est sapiente praesentium eveniet assumenda iusto libero doloremque! Commodi nulla ad magni.</p>
-                <ScrollArea className="h-[400px]" >
-                  <div className="grid grid-cols-1 mt-8 md:grid-cols-2 gap-6">
+                <h1 className="text-3xl md:text-4xl font-bold">My Education</h1>
+                <p className="mb-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est sapiente praesentium eveniet assumenda iusto libero doloremque! Commodi nulla ad magni.</p>
+                <ScrollArea className="h-[350px]" >
+                  <div className="grid grid-cols-1  md:grid-cols-2 gap-6">
                     {
                       educations.map((education, idx) => <div key={idx}
                         className="bg-[#27272c] p-5 rounded-sm flex flex-col gap-4"
