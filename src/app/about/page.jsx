@@ -1,6 +1,7 @@
 "use client"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { motion } from "motion/react"
+import { motion } from "motion/react";
+import { ScrollArea } from "@/components/ui/scroll-area";
 export default function About() {
 
 
@@ -17,6 +18,20 @@ export default function About() {
       institution: "Sirajganj Sadar Technical and Business management institute",
       location: "Sirajganj, Bangladesh",
       duration: "2019 - 2021",
+      grade: "4.58/5.00",
+    },
+    {
+      degree: "SSC",
+      institution: "Chor-Khokshabari High School",
+      location: "Sirajganj, Bangladesh",
+      duration: '2016 - 2028',
+      grade: "4.58/5.00",
+    },
+    {
+      degree: "SSC",
+      institution: "Chor-Khokshabari High School",
+      location: "Sirajganj, Bangladesh",
+      duration: '2016 - 2028',
       grade: "4.58/5.00",
     },
     {
@@ -58,20 +73,22 @@ export default function About() {
               <div>
                 <h1 className="text-4xl">My Education</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est sapiente praesentium eveniet assumenda iusto libero doloremque! Commodi nulla ad magni.</p>
-                <div className="grid grid-cols-1 mt-8 md:grid-cols-2 gap-6">
-                  {
-                    educations.map((education,idx)=><div key={idx}
-                    className="bg-[#27272c] p-5 rounded-sm flex flex-col gap-4" 
-                    >
-                      <h3 className="text-primaryColor">{education?.duration}</h3>
-                      <h2 className="text-2xl font-semibold">{education?.degree}</h2>
-                      <div>
-                      <h3>{education?.institution}</h3>
-                      <p>{education?.location}</p>
-                      </div>
-                    </div>)
-                  }
-                </div>
+                <ScrollArea className="h-[400px]" >
+                  <div className="grid grid-cols-1 mt-8 md:grid-cols-2 gap-6">
+                    {
+                      educations.map((education, idx) => <div key={idx}
+                        className="bg-[#27272c] p-5 rounded-sm flex flex-col gap-4"
+                      >
+                        <h3 className="text-primaryColor">{education?.duration}</h3>
+                        <h2 className="text-2xl font-semibold">{education?.degree}</h2>
+                        <div>
+                          <h3>{education?.institution}</h3>
+                          <p>{education?.location}</p>
+                        </div>
+                      </div>)
+                    }
+                  </div>
+                </ScrollArea>
 
               </div>
             </TabsContent>
