@@ -3,6 +3,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { motion } from "motion/react";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import MySkills from "../components/MySkills";
+import AboutMe from "../components/AboutMeSection";
 export default function About() {
 
 
@@ -52,7 +53,9 @@ export default function About() {
           </TabsList>
           <div className="min-h-[70vh] w-full lg:px-10">
             {/* about */}
-            <TabsContent value="about-me" className="w-full">About Me</TabsContent>
+            <TabsContent value="about-me" className="w-full">
+              <AboutMe/>
+            </TabsContent>
             {/* Skills */}
             <TabsContent value="skills" className="w-full">
               <MySkills/>

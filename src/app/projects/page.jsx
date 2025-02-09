@@ -95,7 +95,7 @@ export default function Projects() {
     <motion.section
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className="min-h-[80vh] flex flex-col justify-center py-12 lg:py-0"
+      className="min-h-[80vh] container mx-auto flex flex-col justify-center py-12 lg:py-0"
     >
       <motion.div 
       initial={{ opacity: 0 }}
