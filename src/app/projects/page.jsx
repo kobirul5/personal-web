@@ -8,6 +8,10 @@ import 'swiper/css';
 import { useState } from "react";
 import Image from "next/image";
 import SwiperProjectBtns from "@/components/ui/SwiperProjectBtns";
+import { BsArrowUpRight } from "react-icons/bs";
+import { Button } from "@/components/ui/button";
+import { FaGithub } from "react-icons/fa6";
+
 export default function Projects() {
 
   const projects = [
@@ -82,7 +86,8 @@ export default function Projects() {
       technologies: ["React", "Tailwind CSS", "Daisy UI", "Firebase"],
       image: "https://i.ibb.co/hsNKGM6/career-Climb.jpg",
       link: "https://assignment-9-11085.web.app/",
-      github: "https://github.com/kobirul5/career-climb"
+      github_client: "https://github.com/kobirul5/career-climb",
+      github_server: "https://github.com/kobirul5/career-climb"
     }
   ];
   const [project, setProject] = useState(projects[0])
@@ -95,7 +100,7 @@ export default function Projects() {
     <motion.section
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className="min-h-[80vh] container mx-auto flex flex-col justify-center py-12 lg:py-0"
+      className="min-h-[80vh] container mx-auto flex flex-col justify-center py-12 px-5 lg:py-0"
     >
       <motion.div 
       initial={{ opacity: 0 }}
@@ -104,7 +109,7 @@ export default function Projects() {
         transition: { delay: 2, duration: 0.4, ease: "easeIn" }
 
     }}
-      className="flex flex-col lg:flex-row lg:gap-8 ">
+      className="flex flex-col lg:flex-row gap-8 ">
         <motion.div className="w-full lg:w-1/2 lg:h-[468px] order-2 lg:order-none">
           <div className="flex flex-col gap-6">
             {/* outline num ? */}
@@ -114,22 +119,50 @@ export default function Projects() {
             {/* button */}
             <div className="flex items-center gap-4">
               {/* live link */}
-              <Link href={""}>
+              <Link target="_blank" href={project?.link}>
                 <TooltipProvider delayDuration={100}>
                   <Tooltip>
-                    <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group ">
-                      Live Link
-
+                    <TooltipTrigger
+                    variant ="outline"
+                     className="border border-primaryColor text-primaryColor hover:text-background hover:bg-primaryColor/90 p-2 px-5  rounded-3xl  flex justify-center items-center group  ">
+                      <BsArrowUpRight className="mr-2"/> 
+                    Live
                     </TooltipTrigger>
                   </Tooltip>
                 </TooltipProvider>
               </Link>
+              <Link target="_blank" href={project?.github_client}>
+                <TooltipProvider delayDuration={100}>
+                  <Tooltip>
+                    <TooltipTrigger
+                    variant ="outline"
+                     className="border border-primaryColor text-primaryColor hover:text-background hover:bg-primaryColor/90 p-2 px-5  rounded-3xl  flex justify-center items-center group  ">
+                      <FaGithub className="mr-2"/>
+                    client
+                    </TooltipTrigger>
+                  </Tooltip>
+                </TooltipProvider>
+              </Link>
+  
+              <Link target="_blank" href={project?.github_server}>
+                <TooltipProvider delayDuration={100}>
+                  <Tooltip>
+                    <TooltipTrigger
+                    variant ="outline"
+                     className="border border-primaryColor text-primaryColor hover:text-background hover:bg-primaryColor/90 p-2 px-5  rounded-3xl  flex justify-center items-center group  ">
+                      <FaGithub className="mr-2"/>
+                    Server
+                    </TooltipTrigger>
+                  </Tooltip>
+                </TooltipProvider>
+              </Link>
+  
 
             </div>
           </div>
         </motion.div>
 
-
+          {/* image */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{

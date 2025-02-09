@@ -38,7 +38,7 @@ export default function About() {
         opacity: 1,
         transition: { delay: 2.4, duration: 0.4, ease: "easeIn" }
       }}
-      className="min-h-[80vh] container mx-auto flex items-center py-12 lg:py-0"
+      className="min-h-[80vh] container mx-auto flex items-center py-12 lg:py-0 px-5"
     >
       <div className="container mx-auto">
         <Tabs
@@ -64,7 +64,7 @@ export default function About() {
             <TabsContent value="education" className="w-full">
               <div>
                 <h1 className="text-3xl md:text-4xl font-bold">My Education</h1>
-                <p className="mb-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est sapiente praesentium eveniet assumenda iusto libero doloremque! Commodi nulla ad magni.</p>
+                <p className="mb-8">Throughout my academic journey, I have gained knowledge and experience in various fields, shaping my skills and expertise. Here are the institutions I have studied at and the qualifications I have earned.</p>
                 <ScrollArea className="h-[350px]" >
                   <div className="grid grid-cols-1  md:grid-cols-2 gap-6">
                     {
