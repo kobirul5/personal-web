@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const Banner = () => {
     return (
-        <div className="lg:mt-10 container mx-auto flex flex-col lg:flex-row justify-between items-center gap-8">
+        <div className="lg:mt-10 z-30 container mx-auto flex flex-col lg:flex-row justify-between items-center gap-8">
             <div className=" flex-1 flex flex-col order-2 lg:order-none">
                 <p className="text-xl uppercase font-semibold">MERN Stack Developer</p>
                 <h1 className="text-4xl md:text-5xl xl:text-7xl font-bold mb-6 mt-2">Hi, I'm <br />  <span className="text-primaryColor">Kobirul Islam</span></h1>

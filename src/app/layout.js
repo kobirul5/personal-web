@@ -1,3 +1,4 @@
+import CanvasCursor from "@/components/Corsor";
 import "./globals.css";
 import Header from "@/components/Header";
 import PageTransition from "@/components/PageTransition";
@@ -20,6 +21,8 @@ export default function RootLayout({ children }) {
         <PageTransition>
         {children}
         </PageTransition>
+        {/* cursor effect */}
+        <CanvasCursor/>
       </body>
     </html>
   );
