@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 
 
-export default function MySkills () {
+export default function MySkills() {
 
     const skills = [
         { name: "React.js", icon: <FaReact className="text-blue-500" /> },
@@ -21,25 +21,31 @@ export default function MySkills () {
     ];
 
     return (
-            <section>
-                <div className="">
-                    <h2 className="text-3xl md:text-4xl font-bold  ">My Skills</h2>
-                    <p className="mt-2 mx-auto max-w-[700px]">I specialize in full-stack development, working with modern technologies to build efficient and scalable web applications.</p>
-                </div>
+        <motion.section
+            initial={{ opacity: 0 }}
+            whileInView={{
+                opacity: 1,
+                transition: { delay: 0.5, duration: 0.4, ease: "easeIn" }
+            }}
+        >
+            <div className="">
+                <h2 className="text-3xl md:text-4xl font-bold  ">My Skills</h2>
+                <p className="mt-2 mx-auto max-w-[700px]">I specialize in full-stack development, working with modern technologies to build efficient and scalable web applications.</p>
+            </div>
 
-                <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-                    {skills.map((skill, index) => (
-                        <motion.div
-                            key={index}
-                            className="p-4 bg-[#27272c]  flex flex-col items-center gap-2"
-                            whileHover={{ scale: 1.1 }}
-                        >
-                            <div className="text-4xl">{skill.icon}</div>
-                            <p className="text-textColor font-medium">{skill.name}</p>
-                        </motion.div>
-                    ))}
-                </div>
-            </section>
+            <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+                {skills.map((skill, index) => (
+                    <motion.div
+                        key={index}
+                        className="p-4 bg-[#27272c]  flex flex-col items-center gap-2"
+                        whileHover={{ scale: 1.1 }}
+                    >
+                        <div className="text-4xl">{skill.icon}</div>
+                        <p className="text-textColor font-medium">{skill.name}</p>
+                    </motion.div>
+                ))}
+            </div>
+        </motion.section>
     );
 };
 

@@ -5,11 +5,11 @@ const BannerPhoto = () => {
     return (
         <div className="w-full h-full relative">
             <motion.div
+                className="flex justify-end"
                 initial={{ opacity: 0 }}
                 animate={{
                     opacity: 1,
                     transition: { delay: 2, duration: 0.4, ease: "easeIn" }
-
                 }}
             >
                 <motion.div
@@ -17,9 +17,8 @@ const BannerPhoto = () => {
                     animate={{
                         opacity: 1,
                         transition: { delay: 2.4, duration: 0.4, ease: "easeInOut" }
-
                     }}
-                    className="w-[298px] h-[298px]  lg:w-[498px]  lg:h-[498px] absolute lg:left-3 lg:top-7 z-10">
+                    className="w-[298px] h-[298px]  lg:w-[498px]  lg:h-[498px] absol lg:right-0 lg:top-7  z-10">
                     <Image
                         src="/assets/kobirul.png"
                         priority
@@ -33,7 +32,7 @@ const BannerPhoto = () => {
                 </motion.div>
 
                 {/* circle */}
-                <motion.svg className="w-[300px] h-[300px] lg:w-[520px] lg:h-[520px]"
+                {/* <motion.svg className="w-[300px] h-[300px] lg:w-[520px] lg:h-[520px] lg:right-0"
                     fill="transparent"
                     viewBox="0 0 520 520"
                     xmlns="http://www.w3/200/svg"
@@ -57,7 +56,7 @@ const BannerPhoto = () => {
                             repeatType: "reverse"
                         }}
                     />
-                </motion.svg>
+                </motion.svg> */}
             </motion.div>
         </div>
     );
