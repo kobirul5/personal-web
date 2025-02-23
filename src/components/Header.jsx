@@ -7,8 +7,8 @@ export default function Header() {
 
 
     return (
-        <header>
-            <nav className="flex justify-between items-center p-5">
+        <header className=" fixed top-0 w-full backdrop-blur-2xl z-20">
+            <nav className="flex justify-between items-center  py-2 container mx-auto">
                 <div><Link href="/" className="text-xl font-semibold  uppercase text-primaryColor hover:cursor-pointer  logo-font tracking-[0.5em]">Kobirul</Link></div>
                 <div className="hidden lg:block">
                     <Nav></Nav>

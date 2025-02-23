@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import PageTransition from "@/components/PageTransition";
 import StairTransition from "@/components/StairTransition";
+import Head from "next/head";
 
 
 export const metadata = {
@@ -13,16 +14,22 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <Head>
+        <link rel="icon" href="/" />
+      </Head>
       <body
         className={`jetbrains-mono antialiased bg-background text-textColor pb-10`}
       >
+        {/* fab icon */}
+
         <Header></Header>
-        <StairTransition/>
+        <div className=" pt-20"></div>
+        <StairTransition />
         <PageTransition>
-        {children}
+          {children}
         </PageTransition>
         {/* cursor effect */}
-        <CanvasCursor/>
+        <CanvasCursor />
       </body>
     </html>
   );

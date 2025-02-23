@@ -111,10 +111,10 @@ export default function Projects() {
         
         className="flex flex-col lg:flex-row gap-8 ">
         <motion.div className="w-full lg:w-1/2 lg:h-[468px] order-2 lg:order-none">
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col   gap-6">
             {/* outline num ? */}
-            <h1 className="text-3xl font-bold">{project?.title}</h1>
-            <p>{project?.description}</p>
+            <h1 className="text-2xl md:text-3xl  font-bold">{project?.title}</h1>
+            <p className="text-justify " >{project?.description}</p>
             {/* button */}
             <div className="flex items-center md:gap-4 gap-1 ">
               {/* live link */}
@@ -177,7 +177,7 @@ export default function Projects() {
             onSlideChange={handleChange}
           >
             {
-              projects.map((project, index) => {
+              projects?.slice(0,3).map((project, index) => {
                 return (
                   <SwiperSlide key={index}>
                     <div className="h-[450px] z-20 relative flex justify-center items-center bg-pink-50/20 ">
@@ -193,7 +193,7 @@ export default function Projects() {
             }
 
             {/* wiper btn */}
-            <SwiperProjectBtns containerStyle={"flex gap-2 absolute right-0 top-1/2 justify-between  lg:justify-end z-20 w-full lg:top-[470px] "} btnStyle={"text-5xl bg-primaryColor text-background"} />
+            <SwiperProjectBtns containerStyle={"flex gap-2 absolute right-0 top-1/2 lg:top-[200px] justify-between z-20 w-full px-3"} btnStyle={"text-5xl bg-primaryColor  hover:bg-primaryColor/70 text-white rounded-xl text-background"} />
           </Swiper>
         </motion.div>
       </motion.div>
