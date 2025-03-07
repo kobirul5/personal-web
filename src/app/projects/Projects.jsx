@@ -56,7 +56,7 @@ export default function Projects() {
         "Google/GitHub login integration"
       ],
       image: "https://i.ibb.co/kJR8Js6/rasturen.jpg",
-      link: "https://assignment-11-client-1cccb.web.app/",
+      link: "https://dine-divine-0.web.app",
       github_client: "https://github.com/kobirul5/Dine-Divine",
       github_server: "https://github.com/kobirul5/Dine-Divine-Server"
     },
