@@ -3,6 +3,7 @@ import Banner from "./components/Banner";
 import MySkills from "./components/MySkills";
 import Projects from "./projects/Projects";
 import Link from "next/link";
+import Education from "@/components/Education/Education";
 
 export default function Home() {
   return (
@@ -21,6 +22,8 @@ export default function Home() {
         <Projects />
         <Link href={"/projects"} className=" flex justify-center text-center"><Button>See My All Projects</Button></Link>
       </section>
+    <Education/>
+
     </main>
   );
 }
