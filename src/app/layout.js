@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import PageTransition from "@/components/PageTransition";
 import StairTransition from "@/components/StairTransition";
 import Head from "next/head";
+import Footer from "@/components/Footer";
 
 
 export const metadata = {
@@ -18,7 +19,7 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/" />
       </Head>
       <body
-        className={`jetbrains-mono antialiased bg-background text-textColor pb-10`}
+        className={`jetbrains-mono antialiased bg-background text-textColor `}
       >
         {/* fab icon */}
 
@@ -30,6 +31,7 @@ export default function RootLayout({ children }) {
         </PageTransition>
         {/* cursor effect */}
         <CanvasCursor />
+        <Footer/>
       </body>
     </html>
   );
