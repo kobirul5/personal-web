@@ -4,6 +4,7 @@ import MySkills from "./components/MySkills";
 import Projects from "./projects/Projects";
 import Link from "next/link";
 import Education from "@/components/Education/Education";
+import Heading from "@/components/Heading";
 
 export default function Home() {
   return (
@@ -15,10 +16,13 @@ export default function Home() {
       </section>
       <section className="relative">
         <div className="absolute top-0 right-0 w-[400px] h-[400px] z-[-1] bg-primaryColor/50 rounded-[50px] blur-[100px] opacity-40 animate-pulse"></div>
-        <div>
-          <h2 className="text-3xl md:text-4xl font-bold  text-center ">My Project</h2>
-          <p className="mt-2 mx-auto text-center lg:w-[80%] my-10">Here are some of the projects I&apos;ve worked on, showcasing my skills in full-stack development using the MERN stack. From dynamic web applications to feature-rich management systems, these projects demonstrate my ability to build efficient and user-friendly solutions</p>
-        </div>
+
+        {/* projects */}
+        <Heading
+          subTitle="My Project"
+          title1="Explore"
+          title2="All Projects"
+        />
         <Projects />
         <Link href={"/projects"} className=" flex justify-center text-center"><Button>See My All Projects</Button></Link>
       </section>

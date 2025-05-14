@@ -3,6 +3,7 @@
 import { FaReact, FaNodeJs } from "react-icons/fa";
 import { SiMongodb, SiExpress, SiFirebase, SiNextdotjs, SiTailwindcss, SiDaisyui } from "react-icons/si";
 import { motion } from "framer-motion";
+import Heading from "@/components/Heading";
 
 
 
@@ -29,8 +30,14 @@ export default function MySkills() {
             }}
         >
             <div className="">
-                <h2 className="text-3xl md:text-4xl font-bold  ">My Skills</h2>
-                <p className="mt-2 mx-auto max-w-[700px]">I specialize in full-stack development, working with modern technologies to build efficient and scalable web applications.</p>
+                <Heading
+                subTitle="Skills"
+                title1="My"
+                title2="Skills"
+
+                ></Heading>
+                {/* <h2 className="text-3xl md:text-4xl font-bold  ">My Skills</h2>
+                <p className="mt-2 mx-auto max-w-[700px]">I specialize in full-stack development, working with modern technologies to build efficient and scalable web applications.</p> */}
             </div>
 
             <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
