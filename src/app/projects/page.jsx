@@ -18,6 +18,29 @@ export default function Projects() {
     const projects = [
         {
             id: 1,
+            title: "EzyTicket -Online Ticket Booking Website",
+            description: "EzyTicket is an online ticket booking platform that allows users to purchase travel, event, and movie tickets with secure payments via SSLCommerz. The system features role-based dashboards (user, manager, and admin) with full CRUD functionality for comprehensive management.",
+            technologies: ["React", "Node.js", "MongoDB", "Firebase", "Express.js", "Tailwind CSS", "JWT", "Redux Toolkit"],
+            features: [
+                "Role-based access for Admin, 3 types of Managers and User with secure login and access control",
+                "Private dashboard for User, All Managers, and admins",
+                "Manager can add, update, and track their listings, while users can browse and buy Travel, Events and Movie Tickets",
+                "Users can update his information choose seat and complete payments securely.",
+                "Secure API routes with JWT authentication",
+                "SweetAlert/Toast notifications for all CRUD operations",
+                "Responsive design for mobile, tablet, and desktop",
+            ],
+            image: "https://i.ibb.co/1tvQzvBZ/ezyticket.jpg",
+            link: "https://ezyticket-7198b.web.app/",
+            github_client: "https://github.com/mazharul90007/ezyTicket-client",
+            github_server: "https://github.com/mazharul90007/ezyTicket-server",
+            admin_email: "admin@example.com",
+            admin_password: "Admin@123",
+            rowSet: true
+        },
+        // --------------
+        {
+            id: 2,
             title: "Work Nest- Employee Management System",
             description: "A web application for monitoring employee workload, salaries, and HR management. Employees can post workflow updates, HR executives can verify and pay employees, and admins can manage user roles and payroll.",
             technologies: ["React", "Node.js", "MongoDB", "Firebase", "Express.js", "Tailwind CSS", "Daisy UI", "JWT"],
@@ -37,10 +60,11 @@ export default function Projects() {
             github_client: "https://github.com/kobirul5/work-nest",
             github_server: "https://github.com/kobirul5/work-nest-server",
             admin_email: "admin@example.com",
-            admin_password: "Admin@123"
+            admin_password: "Admin@123",
+            rowSet: false
         },
         {
-            id: 2,
+            id: 3,
             title: "Dine Divine- Restaurant Management System",
             description: "A full-stack restaurant management website that allows users to browse food items, place orders, and manage restaurant operations efficiently. The system includes user authentication, food management, order tracking, and a secure payment system.",
             technologies: ["React", "Node.js", "MongoDB", "Firebase", "Express.js", "Tailwind CSS", "Daisy UI", "JWT"],
@@ -56,14 +80,14 @@ export default function Projects() {
                 "JWT Authentication for private routes",
                 "Google/GitHub login integration"
             ],
-            image: "https://i.ibb.co/kJR8Js6/rasturen.jpg",
+            image: "https://i.ibb.co/hx8q4jCw/dine-divine.jpg",
             link: "https://dine-divine-0.web.app/",
             github_client: "https://github.com/kobirul5/Dine-Divine",
             github_server: "https://github.com/kobirul5/Dine-Divine-Server",
             rowSet: true
         },
         {
-            id: 3,
+            id: 4,
             title: "GearUp Sports - Sports Equipment Store",
             description: "EquiSports is a responsive e-commerce website for purchasing sports accessories and gear. Customers can browse products, view details, and manage their own equipment listings. The platform includes authentication, product management, and a user-friendly experience.",
             technologies: ["React", "Node.js", "MongoDB", "Firebase", "Express.js", "Tailwind CSS", "Daisy UI"],
@@ -83,7 +107,7 @@ export default function Projects() {
             rowSet: false
         },
         {
-            id: 4,
+            id: 5,
             title: "CareerClimb - Your Career Partner",
             description: "A dedicated platform offering expert career guidance, professional development services, and resources to help individuals unlock their career potential and achieve their goals.",
             technologies: ["React", "Tailwind CSS", "Daisy UI", "Firebase"],

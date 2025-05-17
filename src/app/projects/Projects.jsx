@@ -11,12 +11,36 @@ import SwiperProjectBtns from "@/components/ui/SwiperProjectBtns";
 import { BsArrowUpRight } from "react-icons/bs";
 import { Button } from "@/components/ui/button";
 import { FaGithub } from "react-icons/fa6";
+import { ScrollArea } from "@/components/ui/scroll-area";
 
 export default function Projects() {
 
   const projects = [
     {
       id: 1,
+      title: "EzyTicket -Online Ticket Booking Website",
+      description: "EzyTicket is an online ticket booking platform that allows users to purchase travel, event, and movie tickets with secure payments via SSLCommerz. The system features role-based dashboards (user, manager, and admin) with full CRUD functionality for comprehensive management.",
+      technologies: ["React", "Node.js", "MongoDB", "Firebase", "Express.js", "Tailwind CSS", "JWT", "Redux Toolkit"],
+      features: [
+        "Role-based access for Admin, 3 types of Managers and User with secure login and access control",
+        "Private dashboard for User, All Managers, and admins",
+        "Manager can add, update, and track their listings, while users can browse and buy Travel, Events and Movie Tickets",
+        "Users can update his information choose seat and complete payments securely.",
+        "Secure API routes with JWT authentication",
+        "SweetAlert/Toast notifications for all CRUD operations",
+        "Responsive design for mobile, tablet, and desktop",
+      ],
+      image: "https://i.ibb.co/1tvQzvBZ/ezyticket.jpg",
+      link: "https://ezyticket-7198b.web.app/",
+      github_client: "https://github.com/mazharul90007/ezyTicket-client",
+      github_server: "https://github.com/mazharul90007/ezyTicket-server",
+      admin_email: "admin@example.com",
+      admin_password: "Admin@123",
+      rowSet: true
+    },
+    // --------------
+    {
+      id: 2,
       title: "Work Nest- Employee Management System",
       description: "A web application for monitoring employee workload, salaries, and HR management. Employees can post workflow updates, HR executives can verify and pay employees, and admins can manage user roles and payroll.",
       technologies: ["React", "Node.js", "MongoDB", "Firebase", "Express.js", "Tailwind CSS", "Daisy UI", "JWT"],
@@ -31,15 +55,16 @@ export default function Projects() {
         "Responsive design for mobile, tablet, and desktop",
         "Dashboard with table and card grid toggle view"
       ],
-      image: "https://i.ibb.co/BKsS5Dh9/worknest.jpg",
+      image: "https://i.ibb.co/NgV64VY2/worknest.jpg",
       link: "https://worknest-50eb0.web.app/",
       github_client: "https://github.com/kobirul5/work-nest",
       github_server: "https://github.com/kobirul5/work-nest-server",
       admin_email: "admin@example.com",
-      admin_password: "Admin@123"
+      admin_password: "Admin@123",
+      rowSet: false
     },
     {
-      id: 2,
+      id: 3,
       title: "Dine Divine- Restaurant Management System",
       description: "A full-stack restaurant management website that allows users to browse food items, place orders, and manage restaurant operations efficiently. The system includes user authentication, food management, order tracking, and a secure payment system.",
       technologies: ["React", "Node.js", "MongoDB", "Firebase", "Express.js", "Tailwind CSS", "Daisy UI", "JWT"],
@@ -55,13 +80,14 @@ export default function Projects() {
         "JWT Authentication for private routes",
         "Google/GitHub login integration"
       ],
-      image: "https://i.ibb.co/kJR8Js6/rasturen.jpg",
-      link: "https://dine-divine-0.web.app",
+      image: "https://i.ibb.co/hx8q4jCw/dine-divine.jpg",
+      link: "https://dine-divine-0.web.app/",
       github_client: "https://github.com/kobirul5/Dine-Divine",
-      github_server: "https://github.com/kobirul5/Dine-Divine-Server"
+      github_server: "https://github.com/kobirul5/Dine-Divine-Server",
+      rowSet: true
     },
     {
-      id: 3,
+      id: 4,
       title: "GearUp Sports - Sports Equipment Store",
       description: "EquiSports is a responsive e-commerce website for purchasing sports accessories and gear. Customers can browse products, view details, and manage their own equipment listings. The platform includes authentication, product management, and a user-friendly experience.",
       technologies: ["React", "Node.js", "MongoDB", "Firebase", "Express.js", "Tailwind CSS", "Daisy UI"],
@@ -77,17 +103,19 @@ export default function Projects() {
       image: "https://i.ibb.co/5TV3NxB/spots.jpg",
       link: "https://assignment-10-45e67.web.app/",
       github_client: "https://github.com/kobirul5/gear-up-sports",
-      github_server: "https://github.com/kobirul5/Gear-Up-Sports-Server"
+      github_server: "https://github.com/kobirul5/Gear-Up-Sports-Server",
+      rowSet: false
     },
     {
-      id: 4,
+      id: 5,
       title: "CareerClimb - Your Career Partner",
       description: "A dedicated platform offering expert career guidance, professional development services, and resources to help individuals unlock their career potential and achieve their goals.",
       technologies: ["React", "Tailwind CSS", "Daisy UI", "Firebase"],
       image: "https://i.ibb.co/hsNKGM6/career-Climb.jpg",
       link: "https://assignment-9-11085.web.app/",
       github_client: "https://github.com/kobirul5/career-climb",
-      github_server: "https://github.com/kobirul5/career-climb"
+      github_server: "https://github.com/kobirul5/career-climb",
+      rowSet: true
     }
   ];
   const [project, setProject] = useState(projects[0])
@@ -108,7 +136,7 @@ export default function Projects() {
           opacity: 1,
           transition: { delay: 0.5, duration: 0.4, ease: "easeIn" }
         }}
-        
+
         className="flex flex-col lg:flex-row gap-8 ">
         <motion.div className="w-full lg:w-1/2 lg:h-[468px] order-2 lg:order-none">
           <div className="flex flex-col   gap-6">
@@ -177,16 +205,21 @@ export default function Projects() {
             onSlideChange={handleChange}
           >
             {
-              projects?.slice(0,3).map((project, index) => {
+              projects?.slice(0, 3).map((project, index) => {
                 return (
                   <SwiperSlide key={index}>
-                    <div className="h-[450px] z-20 relative flex justify-center items-center bg-pink-50/20 ">
-                      {/* overlay */}
-                      <div></div>
-                      <div className="relative w-full h-full object-cover ">
-                        <Image src={project?.image} fill alt="project" />
+                    <ScrollArea className="h-[450px] overflow-y-auto">
+                      <div className="relative w-full">
+                        <Image
+                          src={project?.image}
+                          alt="project"
+                          width={800} // set your desired width
+                          height={1500} // taller than 450px to allow scrolling
+                          className="object-cover w-full"
+                        />
                       </div>
-                    </div>
+                    </ScrollArea>
+
                   </SwiperSlide>
                 )
               })
@@ -198,7 +231,7 @@ export default function Projects() {
         </motion.div>
       </motion.div>
 
-      
+
     </motion.section>
   )
 }
