@@ -11,6 +11,7 @@ import SwiperProjectBtns from "@/components/ui/SwiperProjectBtns";
 import { BsArrowUpRight } from "react-icons/bs";
 import { Button } from "@/components/ui/button";
 import { FaGithub } from "react-icons/fa6";
+import { ScrollArea } from "@/components/ui/scroll-area";
 
 export default function Projects() {
 
@@ -31,7 +32,7 @@ export default function Projects() {
                 "Responsive design for mobile, tablet, and desktop",
                 "Dashboard with table and card grid toggle view"
             ],
-            image: "https://i.ibb.co/BKsS5Dh9/worknest.jpg",
+            image: "https://i.ibb.co/NgV64VY2/worknest.jpg",
             link: "https://worknest-50eb0.web.app/",
             github_client: "https://github.com/kobirul5/work-nest",
             github_server: "https://github.com/kobirul5/work-nest-server",
@@ -56,7 +57,7 @@ export default function Projects() {
                 "Google/GitHub login integration"
             ],
             image: "https://i.ibb.co/kJR8Js6/rasturen.jpg",
-            link: "https://assignment-11-client-1cccb.web.app/",
+            link: "https://dine-divine-0.web.app/",
             github_client: "https://github.com/kobirul5/Dine-Divine",
             github_server: "https://github.com/kobirul5/Dine-Divine-Server",
             rowSet: true
@@ -171,13 +172,18 @@ export default function Projects() {
                             }}
                             className="lg:w-1/2 z-10">
 
-                            <div className="h-[450px] z-20 relative flex justify-center items-center bg-pink-50/20 ">
-                                {/* overlay */}
-                                <div></div>
-                                <div className="relative w-full h-full object-cover ">
-                                    <Image src={p?.image} fill alt="project" />
+                            <ScrollArea className="h-[450px] overflow-y-auto">
+                                <div className="relative w-full">
+                                    <Image
+                                        src={p?.image}
+                                        alt="project"
+                                        width={800} // set your desired width
+                                        height={1500} // taller than 450px to allow scrolling
+                                        className="object-cover w-full"
+                                    />
                                 </div>
-                            </div>
+                            </ScrollArea>
+
 
                         </motion.div>
                     </div>)
