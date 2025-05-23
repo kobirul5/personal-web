@@ -10,7 +10,7 @@ const Footer = () => {
   return (
     <footer className="bg-primaryColor/5 mt-10 text-white pt-16 pb-8">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
           {/* About Section */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -38,6 +38,7 @@ const Footer = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
             viewport={{ once: true }}
+            className="md:ml-20"
           >
             <h4 className="text-xl font-semibold mb-6">Quick Links</h4>
             <ul className="space-y-3">
@@ -81,7 +82,7 @@ const Footer = () => {
           </motion.div>
 
           {/* Newsletter */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
@@ -105,7 +106,7 @@ const Footer = () => {
                 Subscribe
               </button>
             </form>
-          </motion.div>
+          </motion.div> */}
         </div>
 
         {/* Copyright */}
