@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope, FaPhone } from "react-icons/fa";
 import { MdLocationOn } from "react-icons/md";
 import Link from "next/link";
+import Social from "./Social";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -23,12 +24,7 @@ const Footer = () => {
               I’m a MERN Stack Developer, building responsive and scalable web apps with MongoDB, Express.js, React.js, and Node.js. Passionate about clean code and user-friendly design.
             </p>
             <div className="flex space-x-4">
-              <Link href="https://github.com/kobirul5" target="_blank" className="text-gray-400 hover:text-primaryColor transition-colors">
-                <FaGithub className="text-2xl" />
-              </Link>
-              <Link href="https://www.linkedin.com/in/kobirul-islam/" target="_blank" className="text-gray-400 hover:text-primaryColor transition-colors">
-                <FaLinkedin className="text-2xl" />
-              </Link>
+              <Social/>
             </div>
           </motion.div>
 
