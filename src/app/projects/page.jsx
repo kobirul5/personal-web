@@ -18,6 +18,33 @@ export default function Projects() {
     const projects = [
         {
             id: 1,
+            title: "SwiftLearn - Minimal LMS System (Frontend)",
+            description: "SwiftLearn is a modern and responsive Learning Management System (LMS) frontend built with Next.js (TypeScript) and Tailwind CSS. It provides a seamless experience for both Admins and Users with dynamic course management, module-wise lecture navigation, embedded video player, and secure role-based access.",
+            technologies: ["Next.js (TypeScript)", "Tailwind CSS", "Redux Toolkit", "RTK Query"],
+            features: [
+                "Admin Panel with secure login",
+                "Admin can upload, edit, and delete courses with thumbnails, prices, and descriptions",
+                "Manage Modules & Lectures with YouTube links and lecture notes",
+                "Filter and view lecture lists easily",
+                "User Panel with dynamic Course Detail and Lecture Pages",
+                "Expandable modules and sequential locked lectures",
+                "Embedded YouTube video player for lectures",
+                "Visual progress tracker for course completion",
+                "Responsive design optimized for mobile, tablet, and desktop"
+            ],
+            image: "/projects/swiftlearn.jpg", 
+            link: "https://swift-learn-nu.vercel.app/",
+            github_client: "https://github.com/kobirul5/Swift-Learn",
+            github_server: "https://github.com/kobirul5/Swift-Learn-Server", 
+            admin_email: "kobirul@gmail.com",
+            admin_password: "12345678",
+            user_email: "kobirul2@gmail.com",
+            user_password: "12345678",
+            rowSet: false
+        }
+        ,
+        {
+            id: 2,
             title: "EzyTicket -Online Ticket Booking Website",
             description: "EzyTicket is an online ticket booking platform that allows users to purchase travel, event, and movie tickets with secure payments via SSLCommerz. The system features role-based dashboards (user, manager, and admin) with full CRUD functionality for comprehensive management.",
             technologies: ["React", "Node.js", "MongoDB", "Firebase", "Express.js", "Tailwind CSS", "JWT", "Redux Toolkit"],
@@ -40,7 +67,7 @@ export default function Projects() {
         },
         // --------------
         {
-            id: 2,
+            id: 3,
             title: "Work Nest- Employee Management System",
             description: "A web application for monitoring employee workload, salaries, and HR management. Employees can post workflow updates, HR executives can verify and pay employees, and admins can manage user roles and payroll.",
             technologies: ["React", "Node.js", "MongoDB", "Firebase", "Express.js", "Tailwind CSS", "Daisy UI", "JWT"],
@@ -64,7 +91,7 @@ export default function Projects() {
             rowSet: false
         },
         {
-            id: 3,
+            id: 4,
             title: "Dine Divine- Restaurant Management System",
             description: "A full-stack restaurant management website that allows users to browse food items, place orders, and manage restaurant operations efficiently. The system includes user authentication, food management, order tracking, and a secure payment system.",
             technologies: ["React", "Node.js", "MongoDB", "Firebase", "Express.js", "Tailwind CSS", "Daisy UI", "JWT"],
@@ -87,7 +114,7 @@ export default function Projects() {
             rowSet: true
         },
         {
-            id: 4,
+            id: 5,
             title: "GearUp Sports - Sports Equipment Store",
             description: "EquiSports is a responsive e-commerce website for purchasing sports accessories and gear. Customers can browse products, view details, and manage their own equipment listings. The platform includes authentication, product management, and a user-friendly experience.",
             technologies: ["React", "Node.js", "MongoDB", "Firebase", "Express.js", "Tailwind CSS", "Daisy UI"],
@@ -107,7 +134,7 @@ export default function Projects() {
             rowSet: false
         },
         {
-            id: 5,
+            id: 6,
             title: "CareerClimb - Your Career Partner",
             description: "A dedicated platform offering expert career guidance, professional development services, and resources to help individuals unlock their career potential and achieve their goals.",
             technologies: ["React", "Tailwind CSS", "Daisy UI", "Firebase"],
