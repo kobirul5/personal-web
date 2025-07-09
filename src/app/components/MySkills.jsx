@@ -1,7 +1,7 @@
 "use client"
 
 import { FaReact, FaNodeJs } from "react-icons/fa";
-import { SiMongodb, SiExpress, SiFirebase, SiNextdotjs, SiTailwindcss, SiDaisyui, SiRedux, SiTypescript, SiMongoose } from "react-icons/si";
+import { SiMongodb, SiExpress, SiFirebase, SiNextdotjs, SiTailwindcss, SiDaisyui, SiRedux, SiTypescript, SiMongoose, SiReduxsaga } from "react-icons/si";
 import { motion } from "framer-motion";
 import Heading from "@/components/Heading";
 
@@ -19,6 +19,7 @@ export default function MySkills() {
         { name: "Tailwind CSS", icon: <SiTailwindcss className="text-blue-400" /> },
         { name: "DaisyUI", icon: <SiDaisyui className="text-purple-500" /> },
         { name: "Redux", icon: <SiRedux className="text-purple-500" /> },
+        { name: "RTK Query", icon: <SiReduxsaga className="text-purple-500" /> },
         { name: "TypeScript", icon: <SiTypescript className="text-blue-500" /> },
         { name: "Mongoose", icon: <SiMongoose className="text-green-500" /> },
 
