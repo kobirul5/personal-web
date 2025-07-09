@@ -5,7 +5,6 @@ import { motion } from "motion/react";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import 'swiper/css';
-import { useState } from "react";
 import Image from "next/image";
 import SwiperProjectBtns from "@/components/ui/SwiperProjectBtns";
 import { BsArrowUpRight } from "react-icons/bs";
@@ -18,9 +17,9 @@ export default function Projects() {
     const projects = [
         {
             id: 1,
-            title: "SwiftLearn - Minimal LMS System (Frontend)",
+            title: "SwiftLearn - Minimal LMS System",
             description: "SwiftLearn is a modern and responsive Learning Management System (LMS) frontend built with Next.js (TypeScript) and Tailwind CSS. It provides a seamless experience for both Admins and Users with dynamic course management, module-wise lecture navigation, embedded video player, and secure role-based access.",
-            technologies: ["Next.js (TypeScript)", "Tailwind CSS", "Redux Toolkit", "RTK Query"],
+            technologies: ["Next.js (TypeScript)", "Tailwind CSS", "Redux Toolkit", "RTK Query", "Node.js", "MongoDB", "Express.js", "JWT", "Mongoose"],
             features: [
                 "Admin Panel with secure login",
                 "Admin can upload, edit, and delete courses with thumbnails, prices, and descriptions",
@@ -29,7 +28,6 @@ export default function Projects() {
                 "User Panel with dynamic Course Detail and Lecture Pages",
                 "Expandable modules and sequential locked lectures",
                 "Embedded YouTube video player for lectures",
-                "Visual progress tracker for course completion",
                 "Responsive design optimized for mobile, tablet, and desktop"
             ],
             image: "/projects/swiftlearn.jpg", 
