@@ -9,11 +9,11 @@
   theme: {
   	extend: {
   		colors:{
-			background: "#1E1E1E",
+			background: "#000000ff",
 			primary: "#3d3d3d",
-			primaryColor: "#ff6421",
+			primaryColor: "#ac63b6ff",
 			accent: "#00FF00",
-			textColor: "#CCCCCC "
+			textColor: "#ffffffff "
 		},
   		borderRadius: {
   			lg: 'var(--radius)',

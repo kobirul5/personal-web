@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/" />
       </Head>
       <body
-        className={`jetbrains-mono antialiased bg-background text-textColor `}
+        className={`inter antialiased bg-background text-textColor `}
       >
         {/* fab icon */}
 
