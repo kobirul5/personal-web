@@ -18,29 +18,20 @@ const AboutMe = () => {
             <p
                 className="text-lg  leading-relaxed  mx-auto text-justify"
             >
-                My name is <span className="font-semibold ">Kobirul Islam</span>. I completed my diploma in
-                Pharmacy in 2023. However, I have always been passionate about computers. After completing my studies,
-                I started a job in October 2023 at <span className="font-semibold ">Popular Diagnostic</span>
-                and worked there until February 2024. Unfortunately, I didn&apos;t enjoy the job and realized it wasn&apos;t the
-                right path for me.
+                My name is <span className="font-semibold">Kobirul Islam</span>, a <span className="font-semibold text-primaryColor">Full Stack Developer</span> based in Sirajganj, Bangladesh. I completed my Diploma in Pharmacy in 2023, but my passion has always been in technology and computers.
 
                 <br /><br />
 
-                During this time, I discovered my interest in
-                <span className="font-bold "> programming</span>,
-                which gave me a sense of
-                <span className="font-bold "> excitement</span> and
-                <span className="font-bold "> fulfillment</span>.
+                After completing my studies, I worked briefly at <span className="font-semibold">Popular Diagnostic</span> but realized that programming was my true calling. I decided to fully commit to
+                <span className="font-bold"> web development</span>, enrolling in the <span className="font-bold">Web Development Complete Course</span> at Programming Hero (June 2024 – January 2025), followed by the <span className="font-bold">Next Level Web Development</span> course (April 2025 – November 2025).
 
-                I decided to quit my job, return home, and fully focus on learning
-                <span className="font-bold "> web development</span>.
-                Since then, I have been
-                <span className="font-bold "> pursuing MERN stack development</span>,
-                and it has been an incredible journey of growth and learning.
+                <br /><br />
+
+                I am currently working as a <span className="font-semibold text-primaryColor">Backend Developer at SM Technology</span> (July 2025 – Present), where I build scalable APIs, implement real-time WebSocket features, integrate payment gateways, and manage database schemas using Prisma ORM with MongoDB.
             </p>
             
         </motion.div>
     );
 };
 
-export default AboutMe;
+export default AboutMe;

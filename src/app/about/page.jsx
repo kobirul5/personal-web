@@ -4,6 +4,7 @@ import { motion } from "motion/react";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import MySkills from "../components/MySkills";
 import AboutMe from "../components/AboutMeSection";
+import Experience from "@/components/Experience/Experience";
 export default function About() {
 
 
@@ -15,19 +16,20 @@ export default function About() {
       location: "Kajipur, Sirajganj, Bangladesh",
       duration: "2019 - 2023"
     },
+  ]
+
+  const courses = [
     {
-      degree: "HSC",
-      institution: "Sirajganj Sadar Technical and Business management institute",
-      location: "Sirajganj, Bangladesh",
-      duration: "2019 - 2021",
-      grade: "4.58/5.00",
+      name: "Web Development Complete Course",
+      institution: "Programming Hero",
+      duration: "June 2024 – January 2025",
+      description: "Comprehensive web development course covering HTML, CSS, JavaScript, React.js, Node.js, Express.js, MongoDB, and full-stack project development."
     },
     {
-      degree: "SSC",
-      institution: "Chor-Khokshabari High School",
-      location: "Sirajganj, Bangladesh",
-      duration: '2016 - 2028',
-      grade: "4.39/5.00",
+      name: "Next Level Web Development",
+      institution: "Programming Hero",
+      duration: "April 2025 – November 2025",
+      description: "Advanced web development course covering Next.js, TypeScript, PostgreSQL, Prisma ORM, Redis, and enterprise-level backend architecture."
     },
   ]
 
@@ -48,13 +50,19 @@ export default function About() {
             className="flex flex-col  items-center w-full lg:max-w-[380px] gap-4 "
           >
             <TabsTrigger value="about-me">About Me</TabsTrigger>
+            <TabsTrigger value="experience">Experience</TabsTrigger>
             <TabsTrigger value="skills">Skills</TabsTrigger>
             <TabsTrigger value="education">Education</TabsTrigger>
+            <TabsTrigger value="courses">Courses</TabsTrigger>
           </TabsList>
           <div className="min-h-[70vh] w-full lg:px-10">
             {/* about */}
             <TabsContent value="about-me" className="w-full">
               <AboutMe/>
+            </TabsContent>
+            {/* Experience */}
+            <TabsContent value="experience" className="w-full">
+              <Experience/>
             </TabsContent>
             {/* Skills */}
             <TabsContent value="skills" className="w-full">
@@ -64,7 +72,7 @@ export default function About() {
             <TabsContent value="education" className="w-full">
               <div>
                 <h1 className="text-3xl md:text-4xl font-bold">My Education</h1>
-                <p className="mb-8">Throughout my academic journey, I have gained knowledge and experience in various fields, shaping my skills and expertise. Here are the institutions I have studied at and the qualifications I have earned.</p>
+                <p className="mb-8 mt-2 text-muted-foreground">Academic background and qualifications.</p>
                 <ScrollArea className="h-[350px]" >
                   <div className="grid grid-cols-1  md:grid-cols-2 gap-6">
                     {
@@ -82,6 +90,26 @@ export default function About() {
                   </div>
                 </ScrollArea>
 
+              </div>
+            </TabsContent>
+
+            {/* Courses & Certification */}
+            <TabsContent value="courses" className="w-full">
+              <div>
+                <h1 className="text-3xl md:text-4xl font-bold">Courses & Certification</h1>
+                <p className="mb-8 mt-2 text-muted-foreground">Professional development and certifications.</p>
+                <ScrollArea className="h-[400px]">
+                  <div className="flex flex-col gap-6">
+                    {courses.map((course, idx) => (
+                      <div key={idx} className="bg-[#27272c] p-5 rounded-sm flex flex-col gap-3">
+                        <h3 className="text-primaryColor font-medium">{course.duration}</h3>
+                        <h2 className="text-xl font-semibold">{course.name}</h2>
+                        <p className="text-primaryColor/80 font-medium">{course.institution}</p>
+                        <p className="text-muted-foreground text-sm leading-relaxed">{course.description}</p>
+                      </div>
+                    ))}
+                  </div>
+                </ScrollArea>
               </div>
             </TabsContent>
 

@@ -19,7 +19,7 @@ const Banner = () => {
             <div className=" flex-1 flex flex-col order-2 lg:order-none">
                 <DesignationText />
                 <h1 className="text-4xl md:text-5xl xl:text-7xl font-bold mb-6 mt-2">Hi, I'm <br />  <span className="text-primaryColor">Kobirul Islam</span></h1>
-                <p className="mb-9">I’m a MERN Stack Developer, building responsive and scalable web apps with MongoDB, Express.js, React.js, and Node.js. Passionate about clean code and user-friendly design. </p>
+                <p className="mb-9">I'm a <span className="text-primaryColor font-semibold">Full Stack Developer</span> specializing in building scalable backend APIs with Node.js, Express.js & TypeScript, and modern frontends with React.js & Next.js. Currently working as a <span className="text-primaryColor font-semibold">Backend Developer at SM Technology</span>.</p>
                 <div className="space-y-5">
                     <a
                         href="/Resume_of_Kobirul.pdf"

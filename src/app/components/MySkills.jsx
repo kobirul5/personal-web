@@ -1,7 +1,8 @@
 "use client"
 
-import { FaReact, FaNodeJs } from "react-icons/fa";
-import { SiMongodb, SiExpress, SiFirebase, SiNextdotjs, SiTailwindcss, SiDaisyui, SiRedux, SiTypescript, SiMongoose, SiReduxsaga } from "react-icons/si";
+import { FaReact, FaNodeJs, FaServer } from "react-icons/fa";
+import { SiMongodb, SiExpress, SiNextdotjs, SiTailwindcss, SiRedux, SiTypescript, SiMongoose, SiReduxsaga, SiPrisma, SiPostgresql, SiJsonwebtokens, SiNginx, SiGithub } from "react-icons/si";
+import { TbWebhook } from "react-icons/tb";
 import { motion } from "framer-motion";
 import Heading from "@/components/Heading";
 
@@ -10,20 +11,29 @@ import Heading from "@/components/Heading";
 export default function MySkills() {
 
     const skills = [
-        { name: "React.js", icon: <FaReact className="text-blue-500" /> },
-        { name: "Node.js", icon: <FaNodeJs className="text-green-600" /> },
-        { name: "Express.js", icon: <SiExpress className="text-gray-600" /> },
-        { name: "MongoDB", icon: <SiMongodb className="text-green-500" /> },
-        { name: "Firebase", icon: <SiFirebase className="text-yellow-500" /> },
-        { name: "Next.js", icon: <SiNextdotjs className="text-black" /> },
-        { name: "Tailwind CSS", icon: <SiTailwindcss className="text-blue-400" /> },
-        { name: "DaisyUI", icon: <SiDaisyui className="text-purple-500" /> },
-        { name: "Redux", icon: <SiRedux className="text-purple-500" /> },
-        { name: "RTK Query", icon: <SiReduxsaga className="text-purple-500" /> },
-        { name: "TypeScript", icon: <SiTypescript className="text-blue-500" /> },
-        { name: "Mongoose", icon: <SiMongoose className="text-green-500" /> },
-
+        // Front-End
+        { name: "React.js", icon: <FaReact className="text-blue-500" />, category: "Frontend" },
+        { name: "Next.js", icon: <SiNextdotjs className="text-white" />, category: "Frontend" },
+        { name: "TypeScript", icon: <SiTypescript className="text-blue-500" />, category: "Frontend" },
+        { name: "PostgreSQL", icon: <SiPostgresql className="text-blue-400" />, category: "Backend" },
+        { name: "MongoDB", icon: <SiMongodb className="text-green-500" />, category: "Backend" },
+        { name: "Redux Toolkit", icon: <SiRedux className="text-purple-500" />, category: "Frontend" },
+        { name: "RTK Query", icon: <SiReduxsaga className="text-purple-500" />, category: "Frontend" },
+        { name: "Tailwind CSS", icon: <SiTailwindcss className="text-blue-400" />, category: "Frontend" },
+        // Back-End
+        { name: "Node.js", icon: <FaNodeJs className="text-green-600" />, category: "Backend" },
+        { name: "Express.js", icon: <SiExpress className="text-gray-400" />, category: "Backend" },
+        { name: "Mongoose", icon: <SiMongoose className="text-red-500" />, category: "Backend" },
+        { name: "Prisma ORM", icon: <SiPrisma className="text-teal-400" />, category: "Backend" },
+        { name: "JWT", icon: <SiJsonwebtokens className="text-yellow-400" />, category: "Backend" },
+        { name: "WebSocket", icon: <TbWebhook className="text-orange-400" />, category: "Backend" },
+        // Deployment
+        { name: "Nginx", icon: <SiNginx className="text-green-400" />, category: "Deployment" },
+        { name: "PM2", icon: <FaServer className="text-gray-400" />, category: "Deployment" },
+        { name: "GitHub", icon: <SiGithub className="text-white" />, category: "Tools" },
     ];
+
+
 
     return (
         <motion.section

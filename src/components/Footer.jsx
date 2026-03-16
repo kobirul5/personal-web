@@ -21,7 +21,7 @@ const Footer = () => {
           >
             <h3 className="text-2xl font-bold mb-6 text-primaryColor">Kobirul Islam</h3>
             <p className="text-gray-400 mb-6">
-              I’m a MERN Stack Developer, building responsive and scalable web apps with MongoDB, Express.js, React.js, and Node.js. Passionate about clean code and user-friendly design.
+              I'm a Full Stack Developer specializing in Node.js, Express.js, TypeScript & React.js/Next.js. Currently working as a Backend Developer at SM Technology.
             </p>
             <div className="flex space-x-4">
               <Social/>

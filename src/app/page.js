@@ -4,7 +4,16 @@ import MySkills from "./components/MySkills";
 import Projects from "./projects/Projects";
 import Link from "next/link";
 import Education from "@/components/Education/Education";
+import Experience from "@/components/Experience/Experience";
 import Heading from "@/components/Heading";
+
+export const metadata = {
+  title: "Md. Kobirul Islam | Full Stack Developer – Portfolio",
+  description: "Welcome to Kobirul Islam's portfolio. Full Stack Developer & Backend Developer at SM Technology. Specializing in Node.js, Express.js, TypeScript, React.js, Next.js, MongoDB, and Prisma ORM. Based in Sirajganj, Bangladesh.",
+  alternates: {
+    canonical: "https://kobirul.dev",
+  },
+};
 
 export default function Home() {
   return (
@@ -25,6 +34,9 @@ export default function Home() {
         />
         <Projects />
         <Link href={"/projects"} className=" flex justify-center text-center"><Button>See My All Projects</Button></Link>
+      </section>
+      <section className="relative">
+        <Experience />
       </section>
     <Education/>
 

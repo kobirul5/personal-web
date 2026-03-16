@@ -4,7 +4,7 @@ import { Cursor, useTypewriter } from "react-simple-typewriter";
 
 const DesignationText = () => {
     const [text] = useTypewriter({
-        words: ["React.js Developer", "Front End Developer", "MERN Stack Developer", "Full Stack Developer"],
+        words: ["Backend Developer", "Full Stack Developer", "React.js Developer", "Next.js Developer"],
         loop: true, // This enables infinite looping
     });
 
