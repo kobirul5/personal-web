@@ -75,7 +75,7 @@ console.log(isSubmitting)
                     className="text-center mb-12 md:mb-16"
                 >
                     <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primaryColor mb-4">
-                        Let's Connect
+                        Let&apos;s Connect
                     </h2>
                     <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
                         Have a project in mind or want to chat? Feel free to reach out!
@@ -198,7 +198,7 @@ console.log(isSubmitting)
                         >
                             <h4 className="font-medium text-lg text-foreground mb-3">Availability</h4>
                             <p className="text-muted-foreground">
-                                I'm currently available for full-time positions. If you have a project that needs my expertise, don't hesitate to reach out!
+                                I&apos;m currently available for full-time positions. If you have a project that needs my expertise, don&apos;t hesitate to reach out!
                             </p>
                         </motion.div>
                     </motion.div>
