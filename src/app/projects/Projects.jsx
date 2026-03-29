@@ -9,7 +9,6 @@ import { useState } from "react";
 import Image from "next/image";
 import SwiperProjectBtns from "@/components/ui/SwiperProjectBtns";
 import { BsArrowUpRight } from "react-icons/bs";
-import { Button } from "@/components/ui/button";
 import { FaGithub } from "react-icons/fa6";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { projects } from "@/data/projectss";
