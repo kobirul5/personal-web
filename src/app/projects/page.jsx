@@ -92,23 +92,18 @@ export default function Projects() {
                                 opacity: 1,
                                 transition: { delay: 2, duration: 0.4, ease: "easeIn" }
                             }}
-                            className="lg:w-1/2 z-10">
-                            <ScrollArea className="h-[450px] pr-3">
-                                <div className="flex flex-col gap-5">
+                            className="lg:w-1/2 z-10 rounded-2xl">
+                            <ScrollArea className="h-[450px] pr-3 rounded-2xl ">
+                                <div className="flex flex-col gap-5 rounded-2xl ">
                                     {(p?.images?.length ? p.images : [p?.image])?.filter(Boolean).map((image, imageIndex) => (
-                                        <div
-                                            key={`${p?.id}-${imageIndex}`}
-                                            className="rounded-2xl overflow-hidden border border-white/10 bg-black/5 shadow-lg"
-                                        >
-                                            <div className="relative w-full">
-                                                <Image
-                                                    src={image}
-                                                    alt={`${p?.title} screenshot ${imageIndex + 1}`}
-                                                    width={1200}
-                                                    height={1500}
-                                                    className="object-cover w-full h-auto"
-                                                />
-                                            </div>
+                                        <div key={`${p?.id}-${imageIndex}`} className="relative w-full rounded-2xl">
+                                            <Image
+                                                src={image}
+                                                alt={`${p?.title} screenshot ${imageIndex + 1}`}
+                                                width={1200}
+                                                height={1500}
+                                                className="object-cover w-full h-auto rounded-2xl"
+                                            />
                                         </div>
                                     ))}
                                 </div>

@@ -99,7 +99,7 @@ export default function Projects() {
             transition: { delay: 2, duration: 0.4, ease: "easeIn" }
 
           }}
-          className="lg:w-1/2 z-10">
+          className="lg:w-1/2 z-10 rounded-2xl">
           <Swiper
             spaceBetween={30}
             slidesPerView={1}
@@ -115,16 +115,14 @@ export default function Projects() {
                     <ScrollArea className="h-[450px] pr-3">
                       <div className="flex flex-col gap-5">
                         {projectImages.map((image, imageIndex) => (
-                          <div key={`${project?.id}-${imageIndex}`} className="rounded-2xl overflow-hidden border border-white/10 bg-black/5 shadow-lg">
-                            <div className="relative w-full">
-                              <Image
-                                src={image}
-                                alt={`${project?.title} screenshot ${imageIndex + 1}`}
-                                width={1200}
-                                height={1500}
-                                className="object-cover w-full h-auto"
-                              />
-                            </div>
+                          <div key={`${project?.id}-${imageIndex}`} className="relative w-full">
+                            <Image
+                              src={image}
+                              alt={`${project?.title} screenshot ${imageIndex + 1}`}
+                              width={1200}
+                              height={1500}
+                              className="object-cover w-full h-auto rounded-2xl"
+                            />
                           </div>
                         ))}
                       </div>
