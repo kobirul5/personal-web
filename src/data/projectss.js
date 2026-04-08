@@ -1,6 +1,44 @@
- export  const projects = [
+ export const projects = [
         {
             id: 1,
+            title: "Friendzo - Social Platform",
+            description: "Friendzo is a full-stack social platform with a Next.js 16 client and an Express + TypeScript backend. It covers the public site, authenticated social experience, events, live messaging, profile pages, discovery flows, store and payment screens, and admin dashboards.",
+            technologies: ["Next.js 16", "React 19", "TypeScript", "Tailwind CSS 4", "Radix UI", "Express.js", "Prisma", "MongoDB", "Socket.io", "JWT"],
+            features: [
+                "Home feed with memories and live community content",
+                "Events feed, event creation, and event engagement",
+                "Messaging UI with live chat state",
+                "Profile pages with memories, events, gifts, and follow actions",
+                "Discovery flows such as find friends, matches, and nearby users",
+                "Store and payment screens for coins, gift cards, and checkout success",
+                "Admin dashboard screens for users, reports, posts, payments, interests, gift cards, and settings",
+                "Authenticated flows for login, register, OTP verification, and profile completion"
+            ],
+            image: "/web/1.jpg",
+            images: [
+                "/web/1.jpg",
+                "/web/2.jpg",
+                "/web/3.jpg",
+                "/web/4.jpg",
+                "/web/5.jpg",
+                "/web/7.jpg",
+                "/web/8.jpg",
+                "/web/9.jpg",
+                "/web/10.jpg",
+                "/web/admin/9.jpg",
+                // "/web/admin/2.jpg",
+                "/web/admin/3.jpg",
+                "/web/admin/4.jpg",
+                "/web/admin/5.jpg",
+                "/web/admin/6.jpg",
+            ],
+            link: "https://friendzo.vercel.app/",
+            github_client: "https://github.com/kobirul5/Friendzo",
+            github_server: "https://github.com/kobirul5/Friendzo_Server",
+            rowSet: true
+        },
+        {
+            id: 2,
             title: "SwiftLearn - Minimal LMS System",
             description: "SwiftLearn is a modern and responsive Learning Management System (LMS) frontend built with Next.js (TypeScript) and Tailwind CSS. It provides a seamless experience for both Admins and Users with dynamic course management, module-wise lecture navigation, embedded video player, and secure role-based access.",
             technologies: ["Next.js (TypeScript)", "Tailwind CSS", "Redux Toolkit", "RTK Query", "Node.js", "MongoDB", "Express.js", "JWT", "Mongoose"],
@@ -14,7 +52,7 @@
                 "Embedded YouTube video player for lectures",
                 "Responsive design optimized for mobile, tablet, and desktop"
             ],
-            image: "/projects/swiftlearn.jpg", 
+            image: "/projects/swiftlearn.jpg",
             link: "https://swift-learn-nu.vercel.app/",
             github_client: "https://github.com/kobirul5/Swift-Learn",
             github_server: "https://github.com/kobirul5/Swift-Learn-Server", 
@@ -26,7 +64,7 @@
         }
         ,
         {
-            id: 2,
+            id: 3,
             title: "EzyTicket -Online Ticket Booking Website",
             description: "EzyTicket is an online ticket booking platform that allows users to purchase travel, event, and movie tickets with secure payments via SSLCommerz. The system features role-based dashboards (user, manager, and admin) with full CRUD functionality for comprehensive management.",
             technologies: ["React", "Node.js", "MongoDB", "Firebase", "Express.js", "Tailwind CSS", "JWT", "Redux Toolkit"],
@@ -49,7 +87,7 @@
         },
         // --------------
         {
-            id: 3,
+            id: 4,
             title: "Work Nest- Employee Management System",
             description: "A web application for monitoring employee workload, salaries, and HR management. Employees can post workflow updates, HR executives can verify and pay employees, and admins can manage user roles and payroll.",
             technologies: ["React", "Node.js", "MongoDB", "Firebase", "Express.js", "Tailwind CSS", "Daisy UI", "JWT"],
@@ -73,7 +111,7 @@
             rowSet: false
         },
         {
-            id: 4,
+            id: 5,
             title: "Dine Divine- Restaurant Management System",
             description: "A full-stack restaurant management website that allows users to browse food items, place orders, and manage restaurant operations efficiently. The system includes user authentication, food management, order tracking, and a secure payment system.",
             technologies: ["React", "Node.js", "MongoDB", "Firebase", "Express.js", "Tailwind CSS", "Daisy UI", "JWT"],
@@ -96,7 +134,7 @@
             rowSet: true
         },
         {
-            id: 5,
+            id: 6,
             title: "GearUp Sports - Sports Equipment Store",
             description: "EquiSports is a responsive e-commerce website for purchasing sports accessories and gear. Customers can browse products, view details, and manage their own equipment listings. The platform includes authentication, product management, and a user-friendly experience.",
             technologies: ["React", "Node.js", "MongoDB", "Firebase", "Express.js", "Tailwind CSS", "Daisy UI"],
@@ -116,7 +154,7 @@
             rowSet: false
         },
         {
-            id: 6,
+            id: 7,
             title: "CareerClimb - Your Career Partner",
             description: "A dedicated platform offering expert career guidance, professional development services, and resources to help individuals unlock their career potential and achieve their goals.",
             technologies: ["React", "Tailwind CSS", "Daisy UI", "Firebase"],

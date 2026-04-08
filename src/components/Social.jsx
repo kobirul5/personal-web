@@ -10,7 +10,7 @@ const Social = () => {
     ]
 
     return (
-        <div className="flex  justify-start items-center gap-3">
+        <div className="flex justify-center items-center gap-3">
            {
             socialLinks.map((i, idx)=> <Link 
             key={idx} 

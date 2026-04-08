@@ -3,14 +3,10 @@
 import { Tooltip, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { motion } from "motion/react";
 import Link from "next/link";
-import { Swiper, SwiperSlide } from "swiper/react";
-import 'swiper/css';
 import Image from "next/image";
-import SwiperProjectBtns from "@/components/ui/SwiperProjectBtns";
-import { BsArrowUpRight } from "react-icons/bs";
-import { Button } from "@/components/ui/button";
-import { FaGithub } from "react-icons/fa6";
 import { ScrollArea } from "@/components/ui/scroll-area";
+import { BsArrowUpRight } from "react-icons/bs";
+import { FaGithub } from "react-icons/fa6";
 import { projects } from "@/data/projectss";
 
 export default function Projects() {
@@ -55,31 +51,35 @@ export default function Projects() {
                                             </Tooltip>
                                         </TooltipProvider>
                                     </Link>
-                                    <Link target="_blank" href={p?.github_client}>
-                                        <TooltipProvider delayDuration={100}>
-                                            <Tooltip>
-                                                <TooltipTrigger
-                                                    variant="outline"
-                                                    className="border border-primaryColor text-primaryColor hover:text-background hover:bg-primaryColor/90 p-2 px-5  rounded-3xl  flex justify-center items-center group  ">
-                                                    <FaGithub className="mr-2" />
-                                                    client
-                                                </TooltipTrigger>
-                                            </Tooltip>
-                                        </TooltipProvider>
-                                    </Link>
+                                    {p?.github_client ? (
+                                        <Link target="_blank" href={p.github_client}>
+                                            <TooltipProvider delayDuration={100}>
+                                                <Tooltip>
+                                                    <TooltipTrigger
+                                                        variant="outline"
+                                                        className="border border-primaryColor text-primaryColor hover:text-background hover:bg-primaryColor/90 p-2 px-5  rounded-3xl  flex justify-center items-center group  ">
+                                                        <FaGithub className="mr-2" />
+                                                        client
+                                                    </TooltipTrigger>
+                                                </Tooltip>
+                                            </TooltipProvider>
+                                        </Link>
+                                    ) : null}
 
-                                    <Link target="_blank" href={p?.github_server}>
-                                        <TooltipProvider delayDuration={100}>
-                                            <Tooltip>
-                                                <TooltipTrigger
-                                                    variant="outline"
-                                                    className="border border-primaryColor text-primaryColor hover:text-background hover:bg-primaryColor/90 p-2 px-5  rounded-3xl  flex justify-center items-center group  ">
-                                                    <FaGithub className="mr-2" />
-                                                    Server
-                                                </TooltipTrigger>
-                                            </Tooltip>
-                                        </TooltipProvider>
-                                    </Link>
+                                    {p?.github_server ? (
+                                        <Link target="_blank" href={p.github_server}>
+                                            <TooltipProvider delayDuration={100}>
+                                                <Tooltip>
+                                                    <TooltipTrigger
+                                                        variant="outline"
+                                                        className="border border-primaryColor text-primaryColor hover:text-background hover:bg-primaryColor/90 p-2 px-5  rounded-3xl  flex justify-center items-center group  ">
+                                                        <FaGithub className="mr-2" />
+                                                        Server
+                                                    </TooltipTrigger>
+                                                </Tooltip>
+                                            </TooltipProvider>
+                                        </Link>
+                                    ) : null}
 
 
                                 </div>
@@ -93,20 +93,26 @@ export default function Projects() {
                                 transition: { delay: 2, duration: 0.4, ease: "easeIn" }
                             }}
                             className="lg:w-1/2 z-10">
-
-                            <ScrollArea className="h-[450px] overflow-y-auto">
-                                <div className="relative w-full">
-                                    <Image
-                                        src={p?.image}
-                                        alt="project"
-                                        width={800} // set your desired width
-                                        height={1500} // taller than 450px to allow scrolling
-                                        className="object-cover w-full"
-                                    />
+                            <ScrollArea className="h-[450px] pr-3">
+                                <div className="flex flex-col gap-5">
+                                    {(p?.images?.length ? p.images : [p?.image])?.filter(Boolean).map((image, imageIndex) => (
+                                        <div
+                                            key={`${p?.id}-${imageIndex}`}
+                                            className="rounded-2xl overflow-hidden border border-white/10 bg-black/5 shadow-lg"
+                                        >
+                                            <div className="relative w-full">
+                                                <Image
+                                                    src={image}
+                                                    alt={`${p?.title} screenshot ${imageIndex + 1}`}
+                                                    width={1200}
+                                                    height={1500}
+                                                    className="object-cover w-full h-auto"
+                                                />
+                                            </div>
+                                        </div>
+                                    ))}
                                 </div>
                             </ScrollArea>
-
-
                         </motion.div>
                     </div>)
             }

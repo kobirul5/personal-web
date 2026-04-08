@@ -56,31 +56,35 @@ export default function Projects() {
                   </Tooltip>
                 </TooltipProvider>
               </Link>
-              <Link target="_blank" href={project?.github_client}>
-                <TooltipProvider delayDuration={100}>
-                  <Tooltip>
-                    <TooltipTrigger
-                      variant="outline"
-                      className="border border-primaryColor text-primaryColor hover:text-background hover:bg-primaryColor/90 p-2 px-3 md:px-5  rounded-3xl  flex justify-center items-center group  ">
-                      <FaGithub className="mr-2" />
-                      client
-                    </TooltipTrigger>
-                  </Tooltip>
-                </TooltipProvider>
-              </Link>
+              {project?.github_client ? (
+                <Link target="_blank" href={project.github_client}>
+                  <TooltipProvider delayDuration={100}>
+                    <Tooltip>
+                      <TooltipTrigger
+                        variant="outline"
+                        className="border border-primaryColor text-primaryColor hover:text-background hover:bg-primaryColor/90 p-2 px-3 md:px-5  rounded-3xl  flex justify-center items-center group  ">
+                        <FaGithub className="mr-2" />
+                        client
+                      </TooltipTrigger>
+                    </Tooltip>
+                  </TooltipProvider>
+                </Link>
+              ) : null}
 
-              <Link target="_blank" href={project?.github_server}>
-                <TooltipProvider delayDuration={100}>
-                  <Tooltip>
-                    <TooltipTrigger
-                      variant="outline"
-                      className="border border-primaryColor text-primaryColor hover:text-background hover:bg-primaryColor/90 p-2 px-3 md:px-5   rounded-3xl  flex justify-center items-center group  ">
-                      <FaGithub className="mr-2" />
-                      Server
-                    </TooltipTrigger>
-                  </Tooltip>
-                </TooltipProvider>
-              </Link>
+              {project?.github_server ? (
+                <Link target="_blank" href={project.github_server}>
+                  <TooltipProvider delayDuration={100}>
+                    <Tooltip>
+                      <TooltipTrigger
+                        variant="outline"
+                        className="border border-primaryColor text-primaryColor hover:text-background hover:bg-primaryColor/90 p-2 px-3 md:px-5   rounded-3xl  flex justify-center items-center group  ">
+                        <FaGithub className="mr-2" />
+                        Server
+                      </TooltipTrigger>
+                    </Tooltip>
+                  </TooltipProvider>
+                </Link>
+              ) : null}
 
 
             </div>
@@ -104,17 +108,25 @@ export default function Projects() {
           >
             {
               projects?.slice(0, 3).map((project, index) => {
+                const projectImages = (project?.images?.length ? project.images : [project?.image]).filter(Boolean);
+
                 return (
                   <SwiperSlide key={index}>
-                    <ScrollArea className="h-[450px] overflow-y-auto">
-                      <div className="relative w-full">
-                        <Image
-                          src={project?.image}
-                          alt="project"
-                          width={800} // set your desired width
-                          height={1500} // taller than 450px to allow scrolling
-                          className="object-cover w-full"
-                        />
+                    <ScrollArea className="h-[450px] pr-3">
+                      <div className="flex flex-col gap-5">
+                        {projectImages.map((image, imageIndex) => (
+                          <div key={`${project?.id}-${imageIndex}`} className="rounded-2xl overflow-hidden border border-white/10 bg-black/5 shadow-lg">
+                            <div className="relative w-full">
+                              <Image
+                                src={image}
+                                alt={`${project?.title} screenshot ${imageIndex + 1}`}
+                                width={1200}
+                                height={1500}
+                                className="object-cover w-full h-auto"
+                              />
+                            </div>
+                          </div>
+                        ))}
                       </div>
                     </ScrollArea>
 
