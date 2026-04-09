@@ -16,7 +16,7 @@ const Banner = () => {
                 transition: { delay: 1, duration: 0.4, ease: "easeIn" }
             }}
             className="lg:mt-10 z-30 container mx-auto flex flex-col lg:flex-row  justify-end items-center gap-8">
-            <div className=" flex-1 flex flex-col order-2 lg:order-none">
+            <div className=" flex-1 flex flex-col order-2 lg:order-none pb-10">
                 <DesignationText />
                 <h1 className="text-4xl md:text-5xl xl:text-7xl font-bold mb-6 mt-2">Hi, I&apos;m <br />  <span className="text-primaryColor">Kobirul Islam</span></h1>
                 <p className="mb-9">I&apos;m a <span className="text-primaryColor font-semibold">Full Stack Developer</span> specializing in building scalable backend APIs with Node.js, Express.js & TypeScript, and modern frontends with React.js & Next.js. Currently working as a <span className="text-primaryColor font-semibold">Backend Developer at SM Technology</span>.</p>

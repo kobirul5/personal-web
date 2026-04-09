@@ -18,7 +18,7 @@ export const metadata = {
 export default function Home() {
   return (
     <main className="h-full relative space-y-16">
-      <section className="z-20 bg-[#141414] py-10 px-5 ">
+      <section className="z-20 bg-[#141414] pt-10 px-5 ">
         <Banner></Banner>
       </section>
       <div className="px-5">
