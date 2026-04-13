@@ -20,7 +20,7 @@ const BannerPhoto = () => {
                     }}
                     className="w-[298px] h-[298px]  lg:w-[498px]  lg:h-[498px] absol lg:right-0 lg:top-7  z-10">
                     <Image
-                        src="/assets/kobirul2.png"
+                        src="/assets/kobirul.png"
                         priority
                         quality={100}
                         fill
