@@ -113,7 +113,7 @@ const Education = () => {
             <div className="absolute inset-0 bg-linear-to-b from-background via-background/80 to-background"></div>
           </div>
 
-          <div className="space-y-16 md:space-y-24">
+          <div className="space-y-10 md:space-y-16">
             {educations.map((edu, index) => (
               <motion.div
                 key={index}

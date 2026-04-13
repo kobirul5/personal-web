@@ -74,7 +74,7 @@ const ContactMe = () => {
       initial="hidden"
       animate="visible"
       variants={containerVariants}
-      className="py-10"
+      className="py-10 mt-16"
       id="contact"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">

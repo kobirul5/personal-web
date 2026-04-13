@@ -24,7 +24,7 @@ export default function Home() {
       </section>
       <div className="px-5">
         
-        <section className="text-center ">
+        <section className="text-center mb10 ">
           <MySkills></MySkills>
         </section>
         <section className="relative">

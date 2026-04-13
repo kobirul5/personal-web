@@ -54,7 +54,7 @@ export default function About() {
         opacity: 1,
         transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
       }}
-      className="min-h-[80vh] container mx-auto flex items-center py-12 lg:py-0 px-5"
+      className="min-h-[80vh] container mx-auto mt-16 flex items-center py-12 lg:py-0 px-5"
     >
       <div className="container mx-auto">
         <Tabs

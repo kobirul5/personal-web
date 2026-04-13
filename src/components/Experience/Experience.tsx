@@ -72,7 +72,7 @@ const Experience = () => {
 
   return (
     <section
-      className="relative pb-10 overflow-hidden"
+      className="relative pb-10 mt-10 overflow-hidden"
       id="experience"
       ref={ref}
     >
