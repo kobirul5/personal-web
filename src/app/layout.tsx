@@ -66,7 +66,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         {/* fab icon */}
 
         <Header></Header>
-        <div className=" pt-20"></div>
+        {/* <div className=" pt-20"></div> */}
         <StairTransition />
         <PageTransition>{children}</PageTransition>
         {/* cursor effect */}
