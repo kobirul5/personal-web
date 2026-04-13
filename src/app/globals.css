@@ -1,8 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+@theme {
+  --color-background: #1E1E1E;
+  --color-primary: #3d3d3d;
+  --color-primaryColor: #ff6421;
+  --color-accent: #00FF00;
+  --color-textColor: #CCCCCC;
+  --color-muted: #2a2a2a;
+  --color-muted-foreground: #888888;
+  --color-border: #404040;
+  --radius-lg: 0.5rem;
+  --radius-md: calc(0.5rem - 2px);
+  --radius-sm: calc(0.5rem - 4px);
+}
 
 @layer utilities {
   .text-outline {

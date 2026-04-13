@@ -1,36 +1,84 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Kobirul Web Portfolio
+
+A modern personal portfolio website for showcasing my work, skills, experience, and contact details.
+
+## Features
+
+- Animated hero banner with personal introduction
+- Responsive profile section with a polished visual layout
+- Projects showcase
+- Skills, education, and experience sections
+- Contact form with email integration
+- Smooth UI animations and responsive design
+
+## Tech Stack
+
+- Next.js 16
+- React 19
+- TypeScript
+- Tailwind CSS
+- Motion
+- Radix UI
+- React Icons
+- EmailJS
+
+## Project Structure
+
+- `src/app` - App Router pages and section components
+- `src/app/components` - Home page banner and supporting components
+- `src/components` - Shared reusable UI sections
+- `public/assets` - Images, resume, and static files
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js installed
+- npm, pnpm, yarn, or bun
+
+### Install Dependencies
+
+```bash
+npm install
+```
+
+### Run Locally
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### Build for Production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+```
 
-## Learn More
+### Start Production Server
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run start
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Available Scripts
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- `npm run dev` - start the development server
+- `npm run build` - create a production build
+- `npm run start` - run the production server
+- `npm run lint` - run lint checks
 
-## Deploy on Vercel
+## Notes
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- The homepage is built with reusable sections for easier maintenance.
+- Animations are handled with Motion for a smoother user experience.
+- The contact form uses EmailJS to send messages directly.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Deployment
+
+This project can be deployed easily on Vercel or any platform that supports Next.js.
+
+## Contact
+
+If you want to connect, use the contact form on the website or reach out through the social links in the portfolio.
