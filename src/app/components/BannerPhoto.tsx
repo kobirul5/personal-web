@@ -19,10 +19,10 @@ const BannerPhoto = () => {
             opacity: 1,
             transition: { delay: 1.7, duration: 0.4, ease: "easeInOut" },
           }}
-          className="w-[298px] h-[298px]  lg:w-[498px]  lg:h-[498px] absol lg:right-0 lg:top-7  z-10"
+          className="w-74.5 h-74.5  lg:w-124.5  lg:h-124.5 absol lg:right-0 lg:top-7  z-10"
         >
           <Image
-            src="/assets/kobirul2.png"
+            src="/assets/kobirul3.png"
             priority
             quality={100}
             fill
@@ -32,7 +32,7 @@ const BannerPhoto = () => {
         </motion.div>
 
         {/* circle */}
-        {/* <motion.svg className="w-[300px] h-[300px] lg:w-[520px] lg:h-[520px] lg:right-0"
+        <motion.svg className="w-[300px] h-[300px] lg:w-[520px] lg:h-[520px] lg:right-0"
                     fill="transparent"
                     viewBox="0 0 520 520"
                     xmlns="http://www.w3/200/svg"
@@ -56,7 +56,7 @@ const BannerPhoto = () => {
                             repeatType: "reverse"
                         }}
                     />
-                </motion.svg> */}
+                </motion.svg>
       </motion.div>
     </div>
   );

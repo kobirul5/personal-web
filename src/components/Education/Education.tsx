@@ -92,12 +92,12 @@ const Education = () => {
               ACADEMIC BACKGROUND
             </span>
             <h2 className="text-4xl md:text-6xl font-bold tracking-tight">
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-primaryColor to-primaryColor/70">
+              <span className="bg-clip-text text-transparent bg-linear-to-r from-primaryColor to-primaryColor/70">
                 Education
               </span>{" "}
               Journey
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-primaryColor to-transparent mt-6 rounded-full"></div>
+            <div className="w-24 h-1 bg-linear-to-r from-primaryColor to-transparent mt-6 rounded-full"></div>
           </div>
         </motion.div>
 
@@ -109,8 +109,8 @@ const Education = () => {
           className="relative container mx-auto"
         >
           {/* Timeline line */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-gradient-to-b from-transparent via-primaryColor/30 to-transparent hidden md:block">
-            <div className="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-background"></div>
+          <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-linear-to-b from-transparent via-primaryColor/30 to-transparent hidden md:block">
+            <div className="absolute inset-0 bg-linear-to-b from-background via-background/80 to-background"></div>
           </div>
 
           <div className="space-y-16 md:space-y-24">
@@ -148,7 +148,7 @@ const Education = () => {
                     overflow-hidden group-hover:border-primaryColor/40`}
                   >
                     {/* Card glow effect */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-primaryColor/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+                    <div className="absolute inset-0 bg-linear-to-br from-primaryColor/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
 
                     <div className="relative z-10 flex flex-col md:flex-row gap-8">
                       {/* Institution Logo */}
