@@ -51,7 +51,6 @@ export const projects: Project[] = [
       "/web/3.jpg",
       "/web/4.jpg",
       "/web/5.jpg",
-      "/web/6.jpg",
       "/web/7.jpg",
       "/web/8.jpg",
       "/web/9.jpg",
