@@ -14,7 +14,7 @@ const Banner = () => {
         opacity: 1,
         transition: { delay: 1, duration: 0.4, ease: "easeIn" },
       }}
-      className="lg:mt-10 z-30 container mx-auto flex flex-col lg:flex-row  justify-end items-center gap-8"
+      className="lg:mt-10 z-30 container mx-auto flex flex-col-reverse pt-10 lg:flex-row  justify-end items-center gap-8"
     >
       <div className=" flex-1 flex flex-col order-2 lg:order-0 pb-10">
         <DesignationText />

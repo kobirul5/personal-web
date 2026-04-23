@@ -24,11 +24,6 @@ const MobileNav = () => {
       scrollSection: "aboutSection",
     },
     {
-      name: "Skills",
-      pathName: "/skills",
-      scrollSection: "skillsSection",
-    },
-    {
       name: "projects",
       pathName: "/projects",
       scrollSection: "projectSection",
