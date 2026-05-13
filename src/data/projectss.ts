@@ -214,6 +214,51 @@ export const projects: Project[] = [
   },
   {
     id: 6,
+    title: "Al Huda - Islamic Learning Platform",
+    description:
+      "Al Huda is a full-stack Islamic learning platform built with Next.js 16 and an Express + TypeScript backend. It provides Quran reading, Hadith browsing, prayer time utilities, Ramadan resources, bookmarks, authentication, profile management, and contact flows in a responsive modern interface.",
+    technologies: [
+      "Next.js 16",
+      "React 19",
+      "TypeScript",
+      "Tailwind CSS 4",
+      "Radix UI",
+      "Express.js",
+      "Prisma",
+      "MongoDB",
+      "JWT",
+      "Zod",
+    ],
+    features: [
+      "Quran reader with Surah, Juz, and page-based navigation",
+      "Verse bookmarking and saved bookmark pages",
+      "Hadith reader with book-wise browsing",
+      "Daily Hadith integration",
+      "Prayer time page with current prayer, daily prayers, weather, and other time tabs",
+      "Ramadan countdown, virtues, duas, and FAQ sections",
+      "Authentication flows for login, registration, OTP verification, forgot password, and reset password",
+      "Profile management and logout flow",
+      "Contact form and informational pages such as About, Blog, Copyright, and Contact Us",
+      "Responsive public layout with navbar and footer",
+    ],
+    image: "/projects/al-huda/1.png",
+    images: [
+      "/projects/al-huda/1.png",
+      "/projects/al-huda/2.png",
+      "/projects/al-huda/3.png",
+      "/projects/al-huda/4.png",
+      "/projects/al-huda/5.png",
+      "/projects/al-huda/6.png",
+      "/projects/al-huda/7.png",
+    ],
+    link: "https://al-huda.vercel.app/",
+    github_client: "https://github.com/kobirul5/al_huda_client",
+    github_server: "https://github.com/kobirul5/al_huda_server",
+    rowSet: false,
+  }
+  ,
+  {
+    id: 7,
     title: "GearUp Sports - Sports Equipment Store",
     description:
       "EquiSports is a responsive e-commerce website for purchasing sports accessories and gear. Customers can browse products, view details, and manage their own equipment listings. The platform includes authentication, product management, and a user-friendly experience.",
@@ -239,10 +284,10 @@ export const projects: Project[] = [
     link: "https://assignment-10-45e67.web.app/",
     github_client: "https://github.com/kobirul5/gear-up-sports",
     github_server: "https://github.com/kobirul5/Gear-Up-Sports-Server",
-    rowSet: false,
+    rowSet: true,
   },
   {
-    id: 7,
+    id: 8,
     title: "CareerClimb - Your Career Partner",
     description:
       "A dedicated platform offering expert career guidance, professional development services, and resources to help individuals unlock their career potential and achieve their goals.",
@@ -251,6 +296,6 @@ export const projects: Project[] = [
     link: "https://assignment-9-11085.web.app/",
     github_client: "https://github.com/kobirul5/career-climb",
     github_server: "https://github.com/kobirul5/career-climb",
-    rowSet: true,
+    rowSet: false,
   },
 ];
