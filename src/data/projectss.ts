@@ -250,13 +250,13 @@ export const projects: Project[] = [
       "/projects/al-huda/5.png",
       "/projects/al-huda/6.png",
       "/projects/al-huda/7.png",
+      "/projects/al-huda/8.png",
     ],
     link: "https://al-huda.vercel.app/",
     github_client: "https://github.com/kobirul5/al_huda_client",
     github_server: "https://github.com/kobirul5/al_huda_server",
     rowSet: false,
-  }
-  ,
+  },
   {
     id: 7,
     title: "GearUp Sports - Sports Equipment Store",
