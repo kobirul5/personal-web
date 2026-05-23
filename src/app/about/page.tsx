@@ -82,7 +82,7 @@ export default function About() {
           defaultValue="about-me"
           className="flex flex-col lg:flex-row mx-auto gap-10 lg:gap-6 lg:mx-0 w-full"
         >
-          <TabsList className="flex flex-col items-stretch w-full lg:max-w-[380px] gap-3 shrink-0">
+          <TabsList className="flex flex-col items-stretch w-full lg:max-w-95 gap-3 shrink-0">
             <TabsTrigger value="about-me">About Me</TabsTrigger>
             <TabsTrigger value="experience">Experience</TabsTrigger>
             <TabsTrigger value="skills">Skills</TabsTrigger>
@@ -107,7 +107,7 @@ export default function About() {
                 <p className="mb-6 md:mb-8 mt-2 text-sm sm:text-base text-muted-foreground">
                   Academic background and qualifications.
                 </p>
-                <ScrollArea className="h-[320px] sm:h-[350px]">
+                <ScrollArea className="h-80 sm:h-87.5">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 pr-3">
                     {educations.map((education, idx) => (
                       <div
@@ -147,7 +147,7 @@ export default function About() {
                 <p className="mb-6 md:mb-8 mt-2 text-sm sm:text-base text-muted-foreground">
                   Professional development and certifications.
                 </p>
-                <ScrollArea className="h-[340px] sm:h-[400px]">
+                <ScrollArea className="h-85 sm:h-100">
                   <div className="flex flex-col gap-4 sm:gap-6 pr-3">
                     {courses.map((course, idx) => (
                       <div
