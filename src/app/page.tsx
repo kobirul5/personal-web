@@ -19,19 +19,21 @@ export const metadata = {
 export default function Home() {
   return (
     <main className="h-full relative space-y-16">
-      <section className="z-20 bg-[#141414e5] pt-10 px-5 ">
+      <section className="z-20 bg-background pt-10 px-5 ">
         <Banner></Banner>
       </section>
       <div className="px-5">
-        
         <section className="text-center mb10 ">
           <MySkills></MySkills>
         </section>
         <section className="relative">
           <div className="absolute top-0 right-0 w-100 h-100 z-[-1] bg-primaryColor/50 rounded-[50px] blur-[100px] opacity-40 animate-pulse"></div>
-
           {/* projects */}
-          <Heading subTitle="My Project" title1="Explore" title2="All Projects" />
+          <Heading
+            subTitle="My Project"
+            title1="Explore"
+            title2="All Projects"
+          />
           <Projects />
           <Link href={"/projects"} className=" flex justify-center text-center">
             <Button>See My All Projects</Button>

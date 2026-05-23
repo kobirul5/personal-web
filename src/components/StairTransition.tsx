@@ -20,7 +20,7 @@ export default function StairTransition() {
               opacity: 0,
               transition: { delay: 1, duration: 0.4, ease: "easeInOut" },
             }}
-            className="w-screen h-screen fixed top-0 bg-primary pointer-events-none"
+            className="w-screen h-screen fixed inset-0 z-30 bg-background pointer-events-none"
           />
         </div>
       </AnimatePresence>

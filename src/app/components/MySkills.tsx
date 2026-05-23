@@ -40,7 +40,7 @@ export default function MySkills() {
     },
     {
       name: "Next.js",
-      icon: <SiNextdotjs className="text-white" />,
+      icon: <SiNextdotjs className="text-textColor" />,
       category: "Frontend",
     },
     {
@@ -117,7 +117,7 @@ export default function MySkills() {
     },
     {
       name: "GitHub",
-      icon: <SiGithub className="text-white" />,
+      icon: <SiGithub className="text-textColor" />,
       category: "Tools",
     },
   ];
@@ -129,16 +129,16 @@ export default function MySkills() {
         opacity: 1,
         transition: { delay: 0.5, duration: 0.4, ease: "easeIn" },
       }}
+      className="container mx-auto w-full"
     >
-      <div className="">
-        <Heading subTitle="Skills" title1="My" title2="Skills"></Heading>
-      </div>
+       <Heading subTitle="Skills" title1="My" title2="Skills"></Heading>
 
-      <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+
+      <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
         {skills.map((skill, index) => (
           <motion.div
             key={index}
-            className="p-4 bg-[#27272c]  flex flex-col items-center gap-2"
+            className="p-4 bg-primary border border-border shadow-sm flex flex-col items-center gap-2"
             whileHover={{ scale: 1.1 }}
           >
             <div className="text-4xl">{skill.icon}</div>

@@ -74,7 +74,7 @@ const ContactMe = () => {
       initial="hidden"
       animate="visible"
       variants={containerVariants}
-      className="py-10 mt-16"
+      className="py-10 mt-16 text-textColor"
       id="contact"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -94,9 +94,9 @@ const ContactMe = () => {
           {/* Contact Form */}
           <motion.div
             variants={itemVariants}
-            className="bg-background rounded-xl shadow-lg p-6 sm:p-8 lg:p-10 border"
+            className="bg-primary rounded-xl border border-border p-6 shadow-lg shadow-slate-200/60 sm:p-8 lg:p-10 dark:shadow-black/20"
           >
-            <h3 className="text-2xl font-semibold text-foreground mb-6 text-primaryColor">
+            <h3 className="mb-6 text-2xl font-semibold text-primaryColor">
               Send me a message
             </h3>
             <form
@@ -156,54 +156,54 @@ const ContactMe = () => {
 
           {/* Contact Information */}
           <motion.div variants={itemVariants} className="space-y-8">
-            <h3 className="text-2xl font-semibold text-foreground">
+            <h3 className="text-2xl font-semibold text-textColor">
               Contact Details
             </h3>
 
             <motion.div
               variants={itemVariants}
-              className="flex items-start gap-4 p-4 bg-muted rounded-lg hover:bg-muted/50 transition-colors duration-300"
+              className="flex items-start gap-4 rounded-lg border border-border bg-primary p-4 shadow-sm transition-colors duration-300 hover:border-primaryColor/30"
             >
               <div className="p-3 bg-primaryColor/10 rounded-full text-primaryColor">
                 <FaLocationArrow className="text-xl" />
               </div>
               <div>
                 <h4 className="font-medium text-muted-foreground">Location</h4>
-                <p className="text-lg text-foreground">Sirajganj, Bangladesh</p>
+                <p className="text-lg text-textColor">Sirajganj, Bangladesh</p>
               </div>
             </motion.div>
 
             <motion.div
               variants={itemVariants}
-              className="flex items-start gap-4 p-4 bg-muted rounded-lg hover:bg-muted/50 transition-colors duration-300"
+              className="flex items-start gap-4 rounded-lg border border-border bg-primary p-4 shadow-sm transition-colors duration-300 hover:border-primaryColor/30"
             >
               <div className="p-3 bg-primaryColor/10 rounded-full text-primaryColor">
                 <FaPhone className="text-xl" />
               </div>
               <div>
                 <h4 className="font-medium text-muted-foreground">Phone</h4>
-                <p className="text-lg text-foreground">+880 1990 955633</p>
+                <p className="text-lg text-textColor">+880 1990 955633</p>
               </div>
             </motion.div>
 
             <motion.div
               variants={itemVariants}
-              className="flex items-start gap-4 p-4 bg-muted rounded-lg hover:bg-muted/50 transition-colors duration-300"
+              className="flex items-start gap-4 rounded-lg border border-border bg-primary p-4 shadow-sm transition-colors duration-300 hover:border-primaryColor/30"
             >
               <div className="p-3 bg-primaryColor/10 rounded-full text-primaryColor">
                 <MdEmail className="text-xl" />
               </div>
               <div>
                 <h4 className="font-medium text-muted-foreground">Email</h4>
-                <p className="text-lg text-foreground">kobirul05j@gmail.com</p>
+                <p className="text-lg text-textColor">kobirul05j@gmail.com</p>
               </div>
             </motion.div>
 
             <motion.div
               variants={itemVariants}
-              className="mt-8 p-6 bg-primaryColor/5 rounded-xl border border-primaryColor/20"
+              className="mt-8 rounded-xl border border-primaryColor/20 bg-primaryColor/5 p-6"
             >
-              <h4 className="font-medium text-lg text-foreground mb-3">
+              <h4 className="mb-3 text-lg font-medium text-textColor">
                 Availability
               </h4>
               <p className="text-muted-foreground">

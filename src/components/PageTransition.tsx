@@ -20,7 +20,7 @@ export default function PageTransition({ children }: PageTransitionProps) {
             opacity: 0,
             transition: { delay: 1, duration: 0.4, ease: "easeInOut" },
           }}
-          className="h-screen w-screen pointer-events-none fixed top-0 bg-primary"
+          className="h-screen w-screen pointer-events-none fixed inset-0 z-30 bg-background"
         />
       </div>
       {children}

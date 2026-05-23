@@ -32,14 +32,14 @@ export default function Projects() {
                     0{p?.id}
                   </div>
                   <h1 className="text-3xl font-bold leading-tight">{p?.title}</h1>
-                  <p className="max-w-2xl text-white/80">{p?.description}</p>
+                  <p className="max-w-2xl text-muted-foreground">{p?.description}</p>
                   <div className="space-y-4">
                     {p?.features?.length ? (
                       <div>
-                        <h2 className="mb-2 text-sm font-semibold uppercase tracking-[0.2em] text-white/60">
+                        <h2 className="mb-2 text-sm font-semibold uppercase tracking-[0.2em] text-muted-foreground">
                           Features
                         </h2>
-                        <ul className="space-y-2 text-sm text-white/75">
+                        <ul className="space-y-2 text-sm text-muted-foreground">
                           {p.features.slice(0, 6).map((feature, featureIndex) => (
                             <li
                               key={`${p.id}-feature-${featureIndex}`}
@@ -55,7 +55,7 @@ export default function Projects() {
 
                     {p?.technologies?.length ? (
                       <div>
-                        <h2 className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-white/60">
+                        <h2 className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-muted-foreground">
                           Technologies
                         </h2>
                         <div className="flex flex-wrap gap-2">
@@ -78,7 +78,7 @@ export default function Projects() {
                       <TooltipProvider delayDuration={100}>
                         <Tooltip>
                           <TooltipTrigger
-                            className="border border-primaryColor text-primaryColor hover:text-background hover:bg-primaryColor/90 p-2 px-5  rounded-3xl  flex justify-center items-center group  "
+                            className="border border-primaryColor text-primaryColor hover:text-white hover:bg-primaryColor/90 p-2 px-5  rounded-3xl  flex justify-center items-center group  "
                           >
                             <BsArrowUpRight className="mr-2" />
                             Live
@@ -91,7 +91,7 @@ export default function Projects() {
                         <TooltipProvider delayDuration={100}>
                           <Tooltip>
                             <TooltipTrigger
-                              className="border border-primaryColor text-primaryColor hover:text-background hover:bg-primaryColor/90 p-2 px-5  rounded-3xl  flex justify-center items-center group  "
+                              className="border border-primaryColor text-primaryColor hover:text-white hover:bg-primaryColor/90 p-2 px-5  rounded-3xl  flex justify-center items-center group  "
                             >
                               <FaGithub className="mr-2" />
                               client
@@ -106,7 +106,7 @@ export default function Projects() {
                         <TooltipProvider delayDuration={100}>
                           <Tooltip>
                             <TooltipTrigger
-                              className="border border-primaryColor text-primaryColor hover:text-background hover:bg-primaryColor/90 p-2 px-5  rounded-3xl  flex justify-center items-center group  "
+                              className="border border-primaryColor text-primaryColor hover:text-white hover:bg-primaryColor/90 p-2 px-5  rounded-3xl  flex justify-center items-center group  "
                             >
                               <FaGithub className="mr-2" />
                               Server

@@ -33,7 +33,7 @@ export default function Stair() {
               ease: "easeInOut",
               delay: reversIndex(index) * 0.1,
             }}
-            className="h-full w-full bg-textColor  relative"
+            className="h-full w-full bg-primaryColor/30 relative"
           ></motion.div>
         );
       })}

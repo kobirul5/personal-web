@@ -112,7 +112,7 @@ export default function About() {
                     {educations.map((education, idx) => (
                       <div
                         key={idx}
-                        className="bg-[#27272c] p-4 sm:p-5 rounded-sm flex flex-col gap-3 sm:gap-4 h-full"
+                        className="bg-primary border border-border shadow-sm p-4 sm:p-5 rounded-sm flex flex-col gap-3 sm:gap-4 h-full"
                       >
                         <h3 className="text-primaryColor font-medium text-sm sm:text-base">
                           {education.duration}
@@ -152,7 +152,7 @@ export default function About() {
                     {courses.map((course, idx) => (
                       <div
                         key={idx}
-                        className="bg-[#27272c] p-4 sm:p-5 rounded-sm flex flex-col gap-3"
+                        className="bg-primary border border-border shadow-sm p-4 sm:p-5 rounded-sm flex flex-col gap-3"
                       >
                         <h3 className="text-primaryColor font-medium text-sm sm:text-base">
                           {course.duration}

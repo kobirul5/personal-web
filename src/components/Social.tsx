@@ -22,7 +22,7 @@ const Social = () => {
           key={idx}
           href={i.path}
           target="_blank"
-          className="w-9 h-9 flex justify-center items-center text-xl border rounded-full border-primaryColor text-primaryColor hover:bg-primaryColor hover:text-background"
+          className="w-9 h-9 flex justify-center items-center text-xl border rounded-full border-primaryColor text-primaryColor hover:bg-primaryColor hover:text-white"
         >
           {i.icon}
         </Link>

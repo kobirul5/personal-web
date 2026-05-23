@@ -41,10 +41,10 @@ export default function Projects() {
             <p className="text-justify ">{project?.description}</p>
             <div className="flex flex-col gap-4">
               <div>
-                <h2 className="mb-2 text-sm font-semibold uppercase tracking-[0.2em] text-white/60">
+                <h2 className="mb-2 text-sm font-semibold uppercase tracking-[0.2em] text-muted-foreground">
                   Features
                 </h2>
-                <ul className="space-y-2 text-sm text-white/75">
+                <ul className="space-y-2 text-sm text-muted-foreground">
                   {project?.features?.slice(0, 4).map((feature, featureIndex) => (
                     <li
                       key={`${project.id}-feature-${featureIndex}`}
@@ -58,7 +58,7 @@ export default function Projects() {
               </div>
 
               <div>
-                <h2 className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-white/60">
+                <h2 className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-muted-foreground">
                   Technology Used
                 </h2>
                 <div className="flex flex-wrap gap-2">
@@ -80,7 +80,7 @@ export default function Projects() {
                 <TooltipProvider delayDuration={100}>
                   <Tooltip>
                     <TooltipTrigger
-                      className="border border-primaryColor text-primaryColor hover:text-background hover:bg-primaryColor/90 p-2 px-3 md:px-5  rounded-3xl  flex justify-center items-center group  "
+                      className="border border-primaryColor text-primaryColor hover:text-white hover:bg-primaryColor/90 p-2 px-3 md:px-5  rounded-3xl  flex justify-center items-center group  "
                     >
                       <BsArrowUpRight className="mr-2" />
                       Live
@@ -93,7 +93,7 @@ export default function Projects() {
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
                       <TooltipTrigger
-                        className="border border-primaryColor text-primaryColor hover:text-background hover:bg-primaryColor/90 p-2 px-3 md:px-5  rounded-3xl  flex justify-center items-center group  "
+                        className="border border-primaryColor text-primaryColor hover:text-white hover:bg-primaryColor/90 p-2 px-3 md:px-5  rounded-3xl  flex justify-center items-center group  "
                       >
                         <FaGithub className="mr-2" />
                         client
@@ -108,7 +108,7 @@ export default function Projects() {
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
                       <TooltipTrigger
-                        className="border border-primaryColor text-primaryColor hover:text-background hover:bg-primaryColor/90 p-2 px-3 md:px-5   rounded-3xl  flex justify-center items-center group  "
+                        className="border border-primaryColor text-primaryColor hover:text-white hover:bg-primaryColor/90 p-2 px-3 md:px-5   rounded-3xl  flex justify-center items-center group  "
                       >
                         <FaGithub className="mr-2" />
                         Server
@@ -171,7 +171,7 @@ export default function Projects() {
                 "flex gap-2 absolute right-0 top-1/2 lg:top-[200px] justify-between z-20 w-full px-3"
               }
               btnStyle={
-                "text-5xl bg-primaryColor  hover:bg-primaryColor/70 text-white rounded-xl text-background"
+                "text-5xl bg-primaryColor hover:bg-primaryColor/70 text-white rounded-xl"
               }
             />
           </Swiper>
