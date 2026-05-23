@@ -6,43 +6,51 @@ import { useRef, useState } from "react";
 import { FaLocationArrow, FaPhone, FaPaperPlane } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { FiCheckCircle } from "react-icons/fi";
-import emailjs from "@emailjs/browser";
 import { Button } from "@/components/ui/button";
 
 const ContactMe = () => {
   const form = useRef<HTMLFormElement>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
-  console.log(isSubmitting);
+  const [errorMessage, setErrorMessage] = useState("");
 
-  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+  const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setIsSuccess(false);
+    setErrorMessage("");
 
-    emailjs
-      .sendForm(
-        "service_1cwh7ah",
-        "template_xw07nfm",
-        form.current as HTMLFormElement,
-        {
-          publicKey: "gsRLxFOjLeCYZW5IM",
-        }
-      )
-      .then(
-        (res) => {
-          console.log(res);
-          setIsSuccess(true);
-          setIsSubmitting(false);
-          if (form.current) {
-            form.current.reset();
-          }
-          setTimeout(() => setIsSuccess(false), 3000);
+    const formData = new FormData(e.currentTarget);
+
+    try {
+      const response = await fetch("/api/send-email", {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
         },
-        (error) => {
-          console.log("FAILED...", error.text);
-          setIsSubmitting(false);
-        }
+        body: JSON.stringify({
+          name: formData.get("from_name"),
+          email: formData.get("from_email"),
+          message: formData.get("message"),
+        }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data?.message || "Failed to send message.");
+      }
+
+      setIsSuccess(true);
+      form.current?.reset();
+      setTimeout(() => setIsSuccess(false), 3000);
+    } catch (error) {
+      setErrorMessage(
+        error instanceof Error ? error.message : "Failed to send message."
       );
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const containerVariants = {
@@ -151,6 +159,20 @@ const ContactMe = () => {
                   )}
                 </Button>
               </motion.div>
+              {isSuccess ? (
+                <div
+                  role="alert"
+                  className="flex items-center gap-2 rounded-md border border-green-500/30 bg-green-500/10 px-4 py-3 text-sm font-medium text-green-600"
+                >
+                  <FiCheckCircle className="text-lg" />
+                  Your message has been sent successfully.
+                </div>
+              ) : null}
+              {errorMessage ? (
+                <p role="alert" className="text-sm font-medium text-red-500">
+                  {errorMessage}
+                </p>
+              ) : null}
             </form>
           </motion.div>
 
