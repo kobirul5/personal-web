@@ -252,7 +252,7 @@ export const projects: Project[] = [
       "/projects/al-huda/7.png",
       "/projects/al-huda/8.png",
     ],
-    link: "https://al-huda.vercel.app/",
+    link: "https://al-huda-client.vercel.app/",
     github_client: "https://github.com/kobirul5/al_huda_client",
     github_server: "https://github.com/kobirul5/al_huda_server",
     rowSet: false,
