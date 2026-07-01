@@ -6,7 +6,7 @@ export const siteConfig = {
   title: "Md. Kobirul Islam | Full Stack Developer",
   description:
     "Md. Kobirul Islam is a Full Stack Developer specializing in Node.js, Express.js, TypeScript, React.js, and Next.js. Currently working as a Backend Developer at SM Technology. Based in Sirajganj, Bangladesh.",
-  url: "https://kobirul.dev",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://kobirul05.vercel.app",
   ogImage: "/assets/kobirul4.png",
   locale: "en_US",
   creator: "@kobirul5",
