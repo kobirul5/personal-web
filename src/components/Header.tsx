@@ -11,6 +11,7 @@ export default function Header() {
         <div>
           <Link
             href="/"
+            aria-label="Kobirul Islam - Home"
             className="logo-font cursor-pointer text-xl font-semibold uppercase tracking-[0.5em] text-primaryColor"
           >
             Kobirul

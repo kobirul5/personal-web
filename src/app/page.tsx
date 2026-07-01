@@ -7,14 +7,14 @@ import Education from "@/components/Education/Education";
 import Experience from "@/components/Experience/Experience";
 import Heading from "@/components/Heading";
 
-export const metadata = {
+import { createMetadata } from "@/lib/seo";
+
+export const metadata = createMetadata({
   title: "Md. Kobirul Islam | Full Stack Developer – Portfolio",
   description:
     "Welcome to Kobirul Islam's portfolio. Full Stack Developer & Backend Developer at SM Technology. Specializing in Node.js, Express.js, TypeScript, React.js, Next.js, MongoDB, and Prisma ORM. Based in Sirajganj, Bangladesh.",
-  alternates: {
-    canonical: "https://kobirul.dev",
-  },
-};
+  path: "/",
+});
 
 export default function Home() {
   return (

@@ -90,9 +90,9 @@ const ContactMe = () => {
           variants={itemVariants}
           className="text-center mb-12 md:mb-16"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primaryColor mb-4">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primaryColor mb-4">
             Let&apos;s Connect
-          </h2>
+          </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Have a project in mind or want to chat? Feel free to reach out!
           </p>

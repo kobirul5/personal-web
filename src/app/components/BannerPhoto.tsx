@@ -28,7 +28,7 @@ const BannerPhoto = () => {
             priority
             quality={100}
             fill
-            alt="Kobirul"
+            alt="Md. Kobirul Islam - Full Stack Developer portrait photo"
             className="object-contain"
           />
         </motion.div>
