@@ -1,15 +1,17 @@
 # Kobirul Web Portfolio
 
-A modern personal portfolio website for showcasing my work, skills, experience, and contact details.
+A modern personal portfolio website built to showcase professional work, skills, experience, and contact details with a clean responsive design.
 
 ## Features
 
 - Animated hero banner with personal introduction
-- Responsive profile section with a polished visual layout
-- Projects showcase
-- Skills, education, and experience sections
-- Contact form with email integration
-- Smooth UI animations and responsive design
+- Responsive portfolio layout for desktop and mobile
+- Projects showcase with image previews and details
+- Skills section with experience and technology highlights
+- Education and experience timeline sections
+- Contact form with integrated email support
+- Smooth motion and page transition animations
+- Dark/light theme support and mobile navigation
 
 ## Tech Stack
 
@@ -17,17 +19,19 @@ A modern personal portfolio website for showcasing my work, skills, experience, 
 - React 19
 - TypeScript
 - Tailwind CSS
-- Motion
+- Framer Motion
 - Radix UI
 - React Icons
-- EmailJS
+- EmailJS for contact form handling
 
 ## Project Structure
 
-- `src/app` - App Router pages and section components
-- `src/app/components` - Home page banner and supporting components
-- `src/components` - Shared reusable UI sections
-- `public/assets` - Images, resume, and static files
+- `src/app` - App Router pages, layouts, and route components
+- `src/app/components` - Home page sections and UI building blocks
+- `src/components` - Shared reusable components across the site
+- `src/lib` - SEO and utility helpers
+- `src/data` - Project data and static content definitions
+- `public/assets` - Static images, project screenshots, and files
 
 ## Getting Started
 
@@ -64,21 +68,22 @@ npm run start
 
 ## Available Scripts
 
-- `npm run dev` - start the development server
-- `npm run build` - create a production build
-- `npm run start` - run the production server
+- `npm run dev` - start the Next.js development server
+- `npm run build` - build the app for production
+- `npm run start` - start the production server
 - `npm run lint` - run lint checks
-
-## Notes
-
-- The homepage is built with reusable sections for easier maintenance.
-- Animations are handled with Motion for a smoother user experience.
-- The contact form uses EmailJS to send messages directly.
 
 ## Deployment
 
-This project can be deployed easily on Vercel or any platform that supports Next.js.
+This portfolio is optimized for deployment on Vercel, Netlify, or any hosting platform that supports Next.js.
+
+## Notes
+
+- The site uses App Router and TypeScript for a modern Next.js architecture.
+- Reusable components reduce duplication and simplify future updates.
+- Tailwind CSS provides a responsive utility-first design system.
+- EmailJS enables the contact form to send messages without a custom backend.
 
 ## Contact
 
-If you want to connect, use the contact form on the website or reach out through the social links in the portfolio.
+Use the website contact form or the social links in the portfolio to connect.
