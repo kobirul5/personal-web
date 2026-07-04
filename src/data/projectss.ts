@@ -74,7 +74,7 @@ export const projects: Project[] = [
     id: 2,
     title: "Al Huda - Islamic Learning Platform",
     description:
-      "Al Huda is a full-stack Islamic learning platform built with Next.js 16 and an Express + TypeScript backend. It provides Quran reading, Hadith browsing, prayer time utilities, Ramadan resources, bookmarks, authentication, profile management, and contact flows in a responsive modern interface.",
+      "Al Huda is a full-stack Islamic learning platform built with Next.js 16 and an Express + TypeScript backend. It provides Quran reading, Hadith browsing, prayer time utilities, Ramadan resources, bookmarks, authentication, profile management, AI chat support, and contact flows in a responsive modern interface.",
     technologies: [
       "Next.js 16",
       "React 19",
@@ -86,11 +86,14 @@ export const projects: Project[] = [
       "MongoDB",
       "JWT",
       "Zod",
+      "AI Chat Assistant",
+      "OpenAI API",
     ],
     features: [
       "Quran reader with Surah, Juz, and page-based navigation",
       "Verse bookmarking and saved bookmark pages",
       "Hadith reader with book-wise browsing",
+      "AI chat assistant for asking Islamic questions and getting guided answers",
       "Daily Hadith integration",
       "Prayer time page with current prayer, daily prayers, weather, and other time tabs",
       "Ramadan countdown, virtues, duas, and FAQ sections",
