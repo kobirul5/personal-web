@@ -15,6 +15,15 @@ interface Education {
 
 const educations: Education[] = [
   {
+    degree: "BA/BSS",
+    institution: "Bangladesh Open University",
+    location: "Sirajganj Govt. College, Sirajganj, Bangladesh",
+    duration: "2025 - Present",
+    grade: "Running",
+    description:
+      "Currently pursuing higher education through Bangladesh Open University.",
+  },
+  {
     degree: "Diploma in Pharmacy",
     institution: "SMMA IHT",
     location: "Kajipur, Sirajganj, Bangladesh",
@@ -189,7 +198,10 @@ const Education = () => {
                         {edu.grade && (
                           <div className="mt-6 inline-flex items-center px-5 py-2.5 rounded-full bg-primaryColor/10 text-primaryColor border border-primaryColor/20">
                             <FaAward className="mr-3 text-lg" />
-                            <span className="font-medium">GPA: {edu.grade}</span>
+                            <span className="font-medium">
+                              {edu.grade === "Running" ? "Status" : "GPA"}:{" "}
+                              {edu.grade}
+                            </span>
                           </div>
                         )}
                       </div>

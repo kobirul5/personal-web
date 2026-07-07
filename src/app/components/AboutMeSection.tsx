@@ -49,12 +49,36 @@ const AboutMe = () => {
         </p>
 
         <p>
+          Alongside my professional work, I am currently pursuing{" "}
+          <span className="font-semibold">BA/BSS</span> at{" "}
+          <span className="font-semibold">Bangladesh Open University</span>,
+          through Sirajganj Govt. College as my study center.
+        </p>
+
+        <p>
           What drives me most is the challenge of creating software that solves
           real problems. I care about writing maintainable code, learning
           continuously, and improving the user experience from both the technical
           and human side. I am always looking for opportunities to grow, contribute,
           and build meaningful products with a strong team.
         </p>
+
+        <div className="rounded-2xl border border-border bg-primary/60 p-4 sm:p-5 shadow-sm">
+          <h2 className="text-lg sm:text-xl font-semibold mb-3">Education</h2>
+          <div className="space-y-2 text-sm sm:text-base">
+            <p>
+              <span className="font-semibold">BA/BSS</span> - Bangladesh Open
+              University
+            </p>
+            <p className="text-muted-foreground">
+              Academic Year: 2025 | Study Center: Sirajganj Govt. College,
+              Sirajganj
+            </p>
+            <p className="text-muted-foreground">
+              Current status: Running
+            </p>
+          </div>
+        </div>
       </div>
     </motion.div>
   );

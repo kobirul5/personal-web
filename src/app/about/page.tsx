@@ -25,6 +25,15 @@ interface Course {
 export default function About() {
   const educations: Education[] = [
     {
+      degree: "BA/BSS",
+      institution: "Bangladesh Open University",
+      location: "Sirajganj Govt. College, Sirajganj, Bangladesh",
+      duration: "2025 - Present",
+      grade: "Running",
+      description:
+        "Currently pursuing higher education through Bangladesh Open University.",
+    },
+    {
       degree: "Diploma in Pharmacy",
       institution: "SMMA IHT",
       location: "Kajipur, Sirajganj, Bangladesh",
@@ -130,7 +139,7 @@ export default function About() {
                           {education.description}
                         </p>
                         <div className="inline-flex items-center px-3 py-2 rounded-full bg-primaryColor/10 text-primaryColor border border-primaryColor/20 w-fit text-sm">
-                          GPA: {education.grade}
+                          Result: {education.grade}
                         </div>
                       </div>
                     ))}
