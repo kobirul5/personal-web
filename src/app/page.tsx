@@ -6,6 +6,7 @@ import Link from "next/link";
 import Education from "@/components/Education/Education";
 import Experience from "@/components/Experience/Experience";
 import Heading from "@/components/Heading";
+import BackendProjects from "./components/BackendProjects";
 
 import { createMetadata } from "@/lib/seo";
 
@@ -38,6 +39,16 @@ export default function Home() {
           <Link href={"/projects"} className=" flex justify-center text-center">
             <Button>See My All Projects</Button>
           </Link>
+        </section>
+        {/* Backend API Projects */}
+        <section className="relative">
+          <div className="absolute top-1/2 left-0 w-80 h-80 z-[-1] bg-primaryColor/30 rounded-full blur-[100px] opacity-30 animate-pulse"></div>
+          <Heading
+            subTitle="Server Side Systems"
+            title1="Backend"
+            title2="API Projects"
+          />
+          <BackendProjects />
         </section>
         <section className="relative">
           <Experience />
