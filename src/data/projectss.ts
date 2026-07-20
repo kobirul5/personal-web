@@ -31,7 +31,7 @@ export const projects: Project[] = [
       "Express.js",
       "Prisma",
       "MongoDB",
-      "Socket.io",
+      "WebSocket",
       "JWT",
     ],
     features: [

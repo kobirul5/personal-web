@@ -32,7 +32,7 @@ export const backendProjects: BackendProject[] = [
       "JWT & bcrypt",
       "Stripe Payments",
       "Firebase Admin",
-      "Socket.io",
+      "WebSocket",
       "Cloudinary / S3",
     ],
     features: [
@@ -41,16 +41,14 @@ export const backendProjects: BackendProject[] = [
       "Onboarding & approval workflows for new Tutors",
       "Tutor discovery engine with filtering by price, subject, and rating",
       "Stripe payment integration for tutor earnings and payment processing",
-      "Real-time chat messaging using WebSockets (Socket.io) with image attachments",
+      "Real-time chat messaging using WebSocket with image attachments",
       "Push notification dispatch via Firebase Cloud Messaging (FCM)",
       "Admin dashboard with user moderation, warnings, and system metrics",
     ],
-    screenshots: [
-      "/tuitioni/1.jpg",
-    ],
+    screenshots: ["/tuitioni/1.jpg"],
     appType: "web",
     github: "https://github.com/kobirul5",
-    live: "https://apps.apple.com/us/app/tuitioni/id6776081845",
+    appStore: "https://apps.apple.com/us/app/tuitioni/id6776081845",
   },
   {
     id: "together-backend",
@@ -58,7 +56,7 @@ export const backendProjects: BackendProject[] = [
     description:
       "A full-stack social platform with a Next.js frontend and Express + TypeScript backend. Handles authentication, social activity, messaging, payments, media uploads, admin tools, and background cron jobs.",
     overview:
-      "Together App is a full-stack social platform where both the web client and backend API are developed by me. The backend stores social data in MongoDB via Prisma, supports real-time chat via Socket.io, manages a virtual economy (coins, gifts, gift cards), and runs background cron jobs — all organized into domain-scoped feature modules.",
+      "Together App is a full-stack social platform where both the web client and backend API are developed by me. The backend stores social data in MongoDB via Prisma, supports real-time chat via WebSocket, manages a virtual economy (coins, gifts, gift cards), and runs background cron jobs — all organized into domain-scoped feature modules.",
     techStack: [
       "Node.js",
       "Express.js",
@@ -67,7 +65,7 @@ export const backendProjects: BackendProject[] = [
       "React 19",
       "Prisma ORM",
       "MongoDB",
-      "Socket.io",
+      "WebSocket",
       "JWT & Bcrypt",
       "Stripe Payments",
       "Cloudinary",
@@ -79,23 +77,19 @@ export const backendProjects: BackendProject[] = [
     features: [
       "JWT access & refresh token authentication with OTP password reset flow",
       "Social feeds: memories, events, likes, comments, follows, and discovery",
-      "Real-time chat with persistence and file upload support via Socket.io",
+      "Real-time chat with persistence and file upload support via WebSocket",
       "Virtual economy: coins, gifts, gift cards, and subscription plans",
       "Stripe payment integration for payment creation and tracking",
       "Admin moderation APIs: users, posts, reports, interests, and pricing",
       "Safety tools: report and block user flows",
       "Background cron jobs: keep-alive ping, daily boost decrements, event date shifts",
     ],
-    screenshots: [
-      "/together/1.png",
-      
-    ],
+    screenshots: ["/together/1.png"],
     // appType: "together",
-    github: "https://github.com/kobirul5/Friendzo_Server",
-    githubClient: "https://github.com/kobirul5/Friendzo",
-    live: "https://friendzo.vercel.app/",
-    playStore: "https://play.google.com/store/apps/details?id=com.togetherapps.together",
-    appStore: "",
+    github: "https://github.com/kobirul5/together_app_server",
+    playStore:
+      "https://play.google.com/store/apps/details?id=com.togetherapps.together",
+    appStore:
+      "https://apps.apple.com/us/app/together-we-have-it-all/id6751863906",
   },
 ];
-
