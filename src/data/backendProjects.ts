@@ -84,7 +84,13 @@ export const backendProjects: BackendProject[] = [
       "Safety tools: report and block user flows",
       "Background cron jobs: keep-alive ping, daily boost decrements, event date shifts",
     ],
-    screenshots: ["/together/1.png"],
+    screenshots: [
+      "/together/1.png",
+      "/together/2.png",
+      "/together/3.png",
+      "/together/4.png",
+      "/together/5.png",
+    ],
     // appType: "together",
     github: "https://github.com/kobirul5/together_app_server",
     playStore:
