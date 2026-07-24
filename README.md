@@ -90,180 +90,127 @@ Use the website contact form or the social links in the portfolio to connect.
 
 ---------------------------------------------------------------------------------------------
 
-
-<div align="center">
-  <!-- <img height="400" src="https://i.ibb.co.com/QFjpH3v9/5592918.jpg" alt="Profile Banner" /> -->
-</div>
-
-<h1 align="center">👋 Hi, I'm <strong>Md. Kobirul Islam</strong></h1>
-
-<h2 align="center">Backend-Focused Full Stack Developer | Building Scalable Web Applications</h2>
+<h1 align="center">Md. Kobirul Islam</h1>
+<h3 align="center">🚀 Backend-Focused Full Stack Developer</h3>
 
 <p align="center">
-  📍 Sirajganj, Bangladesh &nbsp;|&nbsp; 📧 kobirul05j@gmail.com
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&pause=1000&color=2E9EF7&center=true&vCenter=true&width=600&lines=Backend+Developer+%40+SM+Technology;Node.js+%7C+Express.js+%7C+Prisma+%7C+MongoDB;Building+Real-Time+%26+Scalable+APIs;Powered+by+AI-Assisted+Development" alt="Typing SVG" />
 </p>
 
 <p align="center">
-  <a href="https://www.linkedin.com/in/kobirul-islam/" target="_blank">LinkedIn</a> •
-  <a href="https://github.com/kobirul5" target="_blank">GitHub</a>
-</p>
-
----
-
-<h1 align="center">💫 About Me</h1>
-
-<p align="center">
-  I'm a dedicated <strong>Full Stack Developer</strong> with a passion for building performant, user-friendly, and visually appealing web applications.  
-  I specialize in crafting clean, scalable solutions using modern technologies such as <strong>React.js</strong>, <strong>Next.js</strong>, <strong>Tailwind CSS</strong>, and <strong>Firebase Authentication</strong>.  
-  Currently working as a <strong>Backend Developer at SM Technology</strong>, building real-time, secure, and scalable APIs with <strong>Node.js</strong>, <strong>Express.js</strong>, and <strong>Prisma ORM</strong>.
-</p>
-
----
-
-<h2>💼 Work Experience</h2>
-
-<h3>Backend Developer, SM Technology — July 2025 – Present</h3>
-
-<ul>
-  <li>⚡ Implemented real-time features using <strong>WebSocket</strong> for live updates, notifications, and user interactions.</li>
-  <li>💳 Integrated <strong>Stripe</strong> payment gateway for secure payment processing, subscriptions, and transaction handling.</li>
-  <li>🗄️ Designed and managed database schemas using <strong>Prisma ORM</strong> with <strong>MongoDB</strong>.</li>
-  <li>🔐 Implemented <strong>JWT</strong>-based authentication and role-based authorization for secure access control.</li>
-  <li>🤝 Collaborated with frontend developers to ensure seamless API integration and performance optimization.</li>
-  <li>🛠️ Developed and maintained scalable backend APIs using <strong>Node.js</strong>, <strong>Express.js</strong>, and <strong>TypeScript</strong>.</li>
-</ul>
-
----
-
-<h2>💡 What I Do</h2>
-
-<ul>
-  <li>⚡ <strong>Frontend Development:</strong> Designing responsive, dynamic, and accessible user interfaces using <strong>React.js</strong>, <strong>Next.js</strong>, <strong>Redux Toolkit</strong>, <strong>Tailwind CSS</strong>, and <strong>shadcn/ui</strong>.</li>
-  <li>🛠️ <strong>Backend Development:</strong> Building reliable and scalable REST APIs with <strong>Node.js</strong>, <strong>Express.js</strong>, and databases like <strong>MongoDB</strong> using <strong>Prisma</strong> and <strong>Mongoose</strong>.</li>
-  <li>🔐 <strong>Authentication & Authorization:</strong> Implementing secure authentication with <strong>JWT</strong> and <strong>Firebase</strong>.</li>
-  <li>💳 <strong>Payments:</strong> Integrating <strong>Stripe</strong> for secure payment processing, subscriptions, and webhooks.</li>
-  <li>📡 <strong>Data Management:</strong> Streamlining data flow using <strong>TanStack Query</strong> and optimized backend queries with <strong>Prisma ORM</strong>.</li>
-  <li>💬 <strong>Real-Time Applications:</strong> Working with native <strong>WebSocket</strong> for real-time chat, notifications, and location tracking.</li>
-</ul>
-
----
-
-<h2>🚀 Currently Exploring</h2>
-
-<ul>
-  <li>🐳 Containerization & deployment using <strong>Docker</strong></li>
-  <li>📈 Backend optimization & scalable architecture</li>
-</ul>
-
----
-
-<h2>🤖 AI-Assisted Development</h2>
-
-<p>
-  I actively use AI tools like <strong>Claude</strong>, <strong>Cursor</strong>, and <strong>GitHub Copilot</strong> to speed up development, debug faster, and write cleaner code — helping me ship features and solve problems more efficiently.
-</p>
-
-<div align="center">
-  <img src="https://skillicons.dev/icons?i=github" height="40" alt="GitHub Copilot" />
-  <img width="12" />
-  <img src="https://cdn.simpleicons.org/anthropic" height="40" alt="Claude" />
-  <img width="12" />
-  <img src="https://cdn.simpleicons.org/cursor" height="40" alt="Cursor" />
-</div>
-
----
-
-<p align="center">
-✨ <strong>Active Since:</strong> 2024 <br>
-🎯 <strong>Goal:</strong> To become a highly skilled full-stack developer capable of delivering impactful digital solutions. <br>
-💬 <strong>Fun Fact:</strong> My code always works... until I run it. 😅    
-</p>
-
----
-
-<h1 align="center">🧩 Tech Stack</h1>
-
-<div align="center">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="40" alt="JavaScript" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" height="40" alt="TypeScript" />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" height="40" alt="React" />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg" height="40" alt="Redux" />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" height="40" alt="Next.js" />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" height="40" alt="Node.js" />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" height="40" alt="Express.js" />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" height="40" alt="MongoDB" />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" height="40" alt="PostgreSQL" />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prisma/prisma-original.svg" height="40" alt="Prisma" />
-  <img width="12" />
-  <img src="https://raw.githubusercontent.com/MarioTerron/logo-images/master/logos/mongoose.png" height="20" alt="Mongoose" />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original-wordmark.svg" height="40" alt="TailwindCSS" />
-  <img width="12" />
-  <img src="https://skillicons.dev/icons?i=firebase" height="40" alt="Firebase" />
-  <img width="12" />
-  <img src="https://skillicons.dev/icons?i=stripe" height="40" alt="Stripe" />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" height="40" alt="Docker" />
-  <img width="12" />
-  <img src="https://skillicons.dev/icons?i=vercel" height="40" alt="Vercel" />
-</div>
-
----
-
-<h2 align="center">🌐 Connect With Me</h2>
-
-<div align="center">
   <a href="https://www.linkedin.com/in/kobirul-islam/" target="_blank">
-    <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/linkedin/default.svg" width="52" height="40" alt="LinkedIn" />
+    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
+  </a>
+  <a href="https://github.com/kobirul5" target="_blank">
+    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" />
   </a>
   <a href="https://www.facebook.com/kobirul0k/" target="_blank">
-    <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/facebook/default.svg" width="52" height="40" alt="Facebook" />
+    <img src="https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white" />
   </a>
-</div>
+  <a href="mailto:kobirul05j@gmail.com" target="_blank">
+    <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
+  </a>
+</p>
 
----
+<p align="center">📍 Sirajganj, Bangladesh</p>
 
-<h1 align="center">📊 GitHub Analytics</h1>
+<br/>
 
-<div align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=kobirul5&theme=radical" alt="GitHub Streak" />
-  <img src="https://github-readme-stats.vercel.app/api?username=kobirul5&show_icons=true&theme=radical" alt="GitHub Stats" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=kobirul5&layout=compact&theme=radical" alt="Top Languages" />
-</div>
+## 👨‍💻 About Me
 
----
+I'm a dedicated **Full Stack Developer** currently working as a **Backend Developer at SM Technology**, where I build real-time, secure, and scalable backend systems. I specialize in **Node.js**, **Express.js**, and **Prisma ORM**, and I'm equally comfortable crafting clean, modern frontends with **React.js** and **Next.js**.
 
-<h2 align="center">📚 Technical Summary</h2>
+- 🔭 Currently building scalable backend APIs and real-time systems at **SM Technology**
+- 🌱 Learning **Docker**, containerization, and scalable backend architecture
+- ⚡ I use AI tools like **Claude**, **Cursor**, and **GitHub Copilot** daily to move faster and write cleaner code
+- 💬 Fun fact: My code always works... until I run it 😅
 
-| Category | Technologies |
-|-----------|---------------|
-| **Frontend** | React.js, Next.js, TypeScript, Redux Toolkit, Tailwind CSS, shadcn/ui, TanStack Query |
-| **Backend** | Node.js, Express.js, TypeScript |
-| **Database** | MongoDB, Prisma ORM, Mongoose, PostgreSQL (familiar) |
-| **Authentication** | JWT, Firebase Authentication |
-| **Payments** | Stripe |
-| **Deployment** | Vercel, Render, VPS Deployment |
-| **Tools & Platforms** | Git, GitHub, Postman, Firebase |
-| **AI Tools** | Claude, Cursor, GitHub Copilot |
-| **Currently Learning** | Backend Optimization, Scalable Architecture, Docker |
+<br/>
 
----
+## 💼 Work Experience
 
-<h2 align="center">🎓 Education & Certifications</h2>
+### Backend Developer — SM Technology
+**July 2025 – Present**
 
-<ul>
-  <li><strong>Diploma in Pharmacy</strong> — SMMA IHT, Kajipur, Sirajganj (2019 – 2023)</li>
-  <li><strong>Web Development Complete Course</strong> — Programming Hero (June 2024 – January 2025)</li>
-  <li><strong>Next Level Web Development</strong> — Programming Hero (April 2025 – November 2025)</li>
-</ul>
+- ⚡ Implemented real-time features using **WebSocket** for live updates, notifications, and user interactions
+- 💳 Integrated **Stripe** payment gateway for secure payments, subscriptions, and transaction handling
+- 🗄️ Designed and managed database schemas using **Prisma ORM** with **MongoDB**
+- 🔐 Implemented **JWT**-based authentication and role-based authorization
+- 🛠️ Built and maintained scalable backend APIs using **Node.js**, **Express.js**, and **TypeScript**
+- 🤝 Collaborated closely with frontend developers on API integration and performance optimization
+
+<br/>
+
+## 🧰 Tech Stack
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=js,ts,react,redux,nextjs,nodejs,express,mongodb,postgres,prisma,tailwind,firebase,docker,vercel,git,github,postman&perline=9" />
+</p>
+
+<table align="center">
+  <tr>
+    <td><strong>Frontend</strong></td>
+    <td>React.js, Next.js, TypeScript, Redux Toolkit, Tailwind CSS, shadcn/ui, TanStack Query</td>
+  </tr>
+  <tr>
+    <td><strong>Backend</strong></td>
+    <td>Node.js, Express.js, TypeScript, WebSocket</td>
+  </tr>
+  <tr>
+    <td><strong>Database</strong></td>
+    <td>MongoDB, Prisma ORM, Mongoose, PostgreSQL (familiar)</td>
+  </tr>
+  <tr>
+    <td><strong>Auth</strong></td>
+    <td>JWT, Firebase Authentication</td>
+  </tr>
+  <tr>
+    <td><strong>Payments</strong></td>
+    <td>Stripe</td>
+  </tr>
+  <tr>
+    <td><strong>Deployment</strong></td>
+    <td>Vercel, Render, VPS Deployment</td>
+  </tr>
+  <tr>
+    <td><strong>AI Tools</strong></td>
+    <td>Claude, Cursor, GitHub Copilot</td>
+  </tr>
+  <tr>
+    <td><strong>Currently Learning</strong></td>
+    <td>Docker, Backend Optimization, Scalable Architecture</td>
+  </tr>
+</table>
+
+<br/>
+
+## 📊 GitHub Stats
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=kobirul5&show_icons=true&theme=radical&hide_border=true" height="165" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=kobirul5&layout=compact&theme=radical&hide_border=true" height="165" />
+</p>
+
+<p align="center">
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=kobirul5&theme=radical&hide_border=true" />
+</p>
+
+<br/>
+
+## 🎓 Education & Certifications
+
+- 🎓 **Diploma in Pharmacy** — SMMA IHT, Kajipur, Sirajganj (2019 – 2023)
+- 📜 **Web Development Complete Course** — Programming Hero (Jun 2024 – Jan 2025)
+- 📜 **Next Level Web Development** — Programming Hero (Apr 2025 – Nov 2025)
+
+<br/>
+
+<h3 align="center">"Code. Debug. Learn. Repeat."</h3>
+<p align="center"><em>– Md. Kobirul Islam</em></p>
+
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=kobirul5&style=flat-square&color=blue" alt="Profile views" />
+</p>
 
 ---
 
