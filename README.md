@@ -106,8 +106,7 @@ Use the website contact form or the social links in the portfolio to connect.
 
 <p align="center">
   <a href="https://www.linkedin.com/in/kobirul-islam/" target="_blank">LinkedIn</a> •
-  <a href="https://github.com/kobirul5" target="_blank">GitHub</a> •
-  <a href="#" target="_blank">Portfolio</a>
+  <a href="https://github.com/kobirul5" target="_blank">GitHub</a>
 </p>
 
 ---
@@ -156,6 +155,22 @@ Use the website contact form or the social links in the portfolio to connect.
   <li>🐳 Containerization & deployment using <strong>Docker</strong></li>
   <li>📈 Backend optimization & scalable architecture</li>
 </ul>
+
+---
+
+<h2>🤖 AI-Assisted Development</h2>
+
+<p>
+  I actively use AI tools like <strong>Claude</strong>, <strong>Cursor</strong>, and <strong>GitHub Copilot</strong> to speed up development, debug faster, and write cleaner code — helping me ship features and solve problems more efficiently.
+</p>
+
+<div align="center">
+  <img src="https://skillicons.dev/icons?i=github" height="40" alt="GitHub Copilot" />
+  <img width="12" />
+  <img src="https://cdn.simpleicons.org/anthropic" height="40" alt="Claude" />
+  <img width="12" />
+  <img src="https://cdn.simpleicons.org/cursor" height="40" alt="Cursor" />
+</div>
 
 ---
 
@@ -252,7 +267,7 @@ A premium, real-time tutor finder and booking platform backend that simplifies s
   <li>Booking system: scheduling, approvals, and ratings</li>
   <li>Real-time chat: WebSocket messaging with media sharing</li>
   <li>Stripe payments: secure payments with webhook support</li>
-  <li>🔗 <a href="https://github.com/kobirul5/Swift-Learn-Server" target="_blank">Server Repo</a> &nbsp;|&nbsp; 📱 <a href="#" target="_blank">App Store</a></li>
+  <li>🔗 <a href="https://github.com/kobirul5/Swift-Learn-Server" target="_blank">Server Repo</a></li>
 </ul>
 
 <h3>3. SwiftLearn — Learning Management System</h3>
