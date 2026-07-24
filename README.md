@@ -91,7 +91,6 @@ Use the website contact form or the social links in the portfolio to connect.
 ---------------------------------------------------------------------------------------------
 
 
-
 <div align="center">
   <!-- <img height="400" src="https://i.ibb.co.com/QFjpH3v9/5592918.jpg" alt="Profile Banner" /> -->
 </div>
@@ -242,48 +241,6 @@ Use the website contact form or the social links in the portfolio to connect.
 
 ---
 
-<h1 align="center">🚀 Featured Projects</h1>
-
-<h3>1. Together App — Social Networking Mobile Application</h3>
-<p>
-A cross-platform social networking mobile application enabling users to connect through social feeds, real-time messaging, events, and a virtual gifting system. Includes secure payments, subscriptions, and admin tools for community management.
-</p>
-<ul>
-  <li><strong>Role:</strong> Backend Developer</li>
-  <li><strong>Tech Stack:</strong> Flutter, Next.js (Dashboard), TypeScript, Express.js, Prisma</li>
-  <li>Social feeds: memories, events, likes, comments, follows, and discovery</li>
-  <li>Real-time chat with persistence and file upload support via WebSocket</li>
-  <li>Virtual economy: coins, gifts, gift cards, and subscription plans</li>
-  <li>🔗 <a href="https://github.com/kobirul5/together_app_server" target="_blank">Server Repo</a></li>
-</ul>
-
-<h3>2. Tuitioni — Tutor Finder & Booking Platform</h3>
-<p>
-A premium, real-time tutor finder and booking platform backend that simplifies subject discovery, tutor scheduling, secure booking, private messaging, and payments. Features a complete role-based workflow for students, tutors, and administrators with analytics dashboards.
-</p>
-<ul>
-  <li><strong>Role:</strong> Backend Developer</li>
-  <li><strong>Tech Stack:</strong> Flutter, Node.js, Express.js, TypeScript, Prisma ORM, MongoDB, WebSocket, Stripe</li>
-  <li>Booking system: scheduling, approvals, and ratings</li>
-  <li>Real-time chat: WebSocket messaging with media sharing</li>
-  <li>Stripe payments: secure payments with webhook support</li>
-  <li>🔗 <a href="https://github.com/kobirul5/Swift-Learn-Server" target="_blank">Server Repo</a></li>
-</ul>
-
-<h3>3. SwiftLearn — Learning Management System</h3>
-<p>
-An intuitive learning platform that simplifies course, module, and lecture management, offering secure access, smooth navigation, and a responsive experience for learners across all devices.
-</p>
-<ul>
-  <li><strong>Tech Stack:</strong> Next.js, TypeScript, Redux, Express.js, Mongoose</li>
-  <li>Secure authentication & authorization with JWT</li>
-  <li>Dynamic course management with add, update, and delete features</li>
-  <li>Advanced search & filtering for better course browsing</li>
-  <li>🔗 <a href="https://swift-learn-nu.vercel.app/" target="_blank">Live Demo</a> &nbsp;|&nbsp; <a href="https://github.com/kobirul5/Swift-Learn" target="_blank">Client Repo</a> &nbsp;|&nbsp; <a href="https://github.com/kobirul5/Swift-Learn-Server" target="_blank">Server Repo</a></li>
-</ul>
-
----
-
 <h2 align="center">📚 Technical Summary</h2>
 
 | Category | Technologies |
@@ -295,6 +252,7 @@ An intuitive learning platform that simplifies course, module, and lecture manag
 | **Payments** | Stripe |
 | **Deployment** | Vercel, Render, VPS Deployment |
 | **Tools & Platforms** | Git, GitHub, Postman, Firebase |
+| **AI Tools** | Claude, Cursor, GitHub Copilot |
 | **Currently Learning** | Backend Optimization, Scalable Architecture, Docker |
 
 ---
