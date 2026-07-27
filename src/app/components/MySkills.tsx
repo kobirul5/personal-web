@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { FaReact, FaNodeJs, FaServer } from "react-icons/fa";
 import {
   SiMongodb, SiExpress, SiNextdotjs, SiTailwindcss,
@@ -17,17 +17,18 @@ interface Skill {
   icon: React.ReactNode;
   category: string;
   color: string;
+  darkColor?: string;
 }
 
 const skills: Skill[] = [
   { name: "React.js",      icon: <FaReact />,         category: "Frontend",   color: "#61DAFB" },
-  { name: "Next.js",       icon: <SiNextdotjs />,     category: "Frontend",   color: "#e2e8f0" },
+  { name: "Next.js",       icon: <SiNextdotjs />,     category: "Frontend",   color: "#1f252e", darkColor: "#ffffff" },
   { name: "TypeScript",    icon: <SiTypescript />,    category: "Frontend",   color: "#3178C6" },
   { name: "Redux Toolkit", icon: <SiRedux />,         category: "Frontend",   color: "#764ABC" },
   { name: "RTK Query",     icon: <SiReduxsaga />,     category: "Frontend",   color: "#A78BFA" },
   { name: "Tailwind CSS",  icon: <SiTailwindcss />,   category: "Frontend",   color: "#38BDF8" },
   { name: "Node.js",       icon: <FaNodeJs />,        category: "Backend",    color: "#6DBF4A" },
-  { name: "Express.js",    icon: <SiExpress />,       category: "Backend",    color: "#9CA3AF" },
+  { name: "Express.js",    icon: <SiExpress />,       category: "Backend",    color: "#40444b", darkColor: "#ffffff" },
   { name: "MongoDB",       icon: <SiMongodb />,       category: "Backend",    color: "#4DB33D" },
   { name: "Mongoose",      icon: <SiMongoose />,      category: "Backend",    color: "#EF4444" },
   { name: "Prisma ORM",    icon: <SiPrisma />,        category: "Backend",    color: "#2DD4BF" },
@@ -35,9 +36,9 @@ const skills: Skill[] = [
   { name: "JWT",           icon: <SiJsonwebtokens />, category: "Backend",    color: "#FBBF24" },
   { name: "WebSocket",     icon: <TbWebhook />,       category: "Backend",    color: "#FB923C" },
   { name: "Nginx",         icon: <SiNginx />,         category: "Deployment", color: "#4ADE80" },
-  { name: "PM2",           icon: <FaServer />,        category: "Deployment", color: "#9CA3AF" },
+  { name: "PM2",           icon: <FaServer />,        category: "Deployment", color: "#3d4046", darkColor: "#ffffff" },
   { name: "VPS",           icon: <BsServer />,        category: "Deployment", color: "#F472B6" },
-  { name: "GitHub",        icon: <SiGithub />,        category: "Tools",      color: "#E2E8F0" },
+  { name: "GitHub",        icon: <SiGithub />,        category: "Tools",      color: "#0d0d0e", darkColor: "#ffffff" },
 ];
 
 // ── Carousel config ──────────────────────────────────────────────
@@ -59,6 +60,16 @@ function FanCarousel() {
   const dragStartX = useRef(0);
   const dragStartOffset = useRef(0);
   const n = skills.length;
+
+  const [isDark, setIsDark] = useState(false);
+  useEffect(() => {
+    setIsDark(document.documentElement.classList.contains("dark"));
+    const observer = new MutationObserver(() => {
+      setIsDark(document.documentElement.classList.contains("dark"));
+    });
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+    return () => observer.disconnect();
+  }, []);
 
   const pausedRef = useRef(isPaused);
   pausedRef.current = isPaused || isDragging;
@@ -139,6 +150,7 @@ function FanCarousel() {
             ? 1 - absRel * 0.14
             : Math.max(0, 1 - (absRel - fadeStart) * 3);
           const zIdx      = Math.round((VISIBLE + 1 - absRel) * 10);
+          const activeColor = (isDark && skill.darkColor) ? skill.darkColor : skill.color;
 
           return (
             <div
@@ -167,7 +179,7 @@ function FanCarousel() {
                   boxShadow: `
                     0 8px 32px rgba(0,0,0,0.35),
                     0 0 0 1px rgba(255,255,255,0.06) inset,
-                    0 0 28px 4px ${skill.color}28
+                    0 0 28px 4px ${activeColor}28
                   `,
                 }}
               >
@@ -175,8 +187,8 @@ function FanCarousel() {
                 <div
                   style={{
                     fontSize: 84,
-                    color: skill.color,
-                    filter: `drop-shadow(0 0 12px ${skill.color}cc)`,
+                    color: activeColor,
+                    filter: `drop-shadow(0 0 12px ${activeColor}cc)`,
                     lineHeight: 1,
                   }}
                 >
@@ -188,8 +200,8 @@ function FanCarousel() {
                   className="font-semibold text-center leading-tight px-2"
                   style={{
                     fontSize: 15,
-                    color: skill.color,
-                    textShadow: `0 0 8px ${skill.color}aa`,
+                    color: activeColor,
+                    textShadow: `0 0 8px ${activeColor}aa`,
                     maxWidth: CARD_W - 12,
                     whiteSpace: "nowrap",
                     overflow: "hidden",
@@ -203,9 +215,9 @@ function FanCarousel() {
                 <span
                   className="text-[11px] uppercase tracking-widest font-bold px-3 py-1 rounded-full"
                   style={{
-                    background: `${skill.color}18`,
-                    border:     `1px solid ${skill.color}44`,
-                    color:      skill.color,
+                    background: `${activeColor}18`,
+                    border:     `1px solid ${activeColor}44`,
+                    color:      activeColor,
                   }}
                 >
                   {skill.category}

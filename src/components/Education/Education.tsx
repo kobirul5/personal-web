@@ -129,7 +129,7 @@ const Education = () => {
         </motion.div>
 
         {/* Timeline Section */}
-        <div className="relative mx-auto max-w-5xl">
+        <div className="relative mx-auto w-full">
           {/* Vertical Timeline Line - Centered on desktop, left-aligned on mobile */}
           <div className="absolute left-8 md:left-1/2 top-2 bottom-2 w-[2px] -translate-x-1/2 bg-linear-to-b from-primaryColor via-primaryColor/40 to-transparent" />
 
