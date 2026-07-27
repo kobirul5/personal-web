@@ -64,7 +64,6 @@ function OrbitRing({
   iconSize = 36,
   cardSize = 76,
   reverse = false,
-  paused,
 }: {
   items: Skill[];
   radius: number;
@@ -73,7 +72,6 @@ function OrbitRing({
   iconSize?: number;
   cardSize?: number;
   reverse?: boolean;
-  paused: boolean;
 }) {
   const angleRef = useRef(0);
   const [angles, setAngles] = useState<number[]>(
@@ -81,7 +79,6 @@ function OrbitRing({
   );
 
   useAnimationFrame((_, delta) => {
-    if (paused) return;
     const step = (speed * delta) / 1000;
     angleRef.current += reverse ? -step : step;
     setAngles(items.map((_, i) => angleRef.current + (360 / items.length) * i));
@@ -160,8 +157,6 @@ function OrbitRing({
 }
 
 export default function MySkills() {
-  const [paused, setPaused] = useState(false);
-
   return (
     <motion.section
       initial={{ opacity: 0, y: 40 }}
@@ -175,14 +170,12 @@ export default function MySkills() {
 
       {/* ── Orbit Stage — full viewport width ── */}
       <div
-        className="relative mt-6 select-none overflow-hidden"
+        className="relative mt-2 select-none overflow-hidden"
         style={{
           width: "100vw",
           marginLeft: "calc(-50vw + 50%)",
           height: 800,
         }}
-        onMouseEnter={() => setPaused(true)}
-        onMouseLeave={() => setPaused(false)}
       >
         {/* ambient radial glow */}
         <div
@@ -207,18 +200,18 @@ export default function MySkills() {
 
         {/* 3-D scene */}
         <div className="absolute inset-0" style={{ perspective: 1000 }}>
-          <div className="relative w-full h-full" style={{ transformStyle: "preserve-3d" }}>
+          <div className="relative w-full h-full " style={{ transformStyle: "preserve-3d" }}>
             {/* Outer ring — 8 skills, slow, forward */}
-            <OrbitRing items={OUTER_SKILLS} radius={650} tiltDeg={18} speed={11} iconSize={60} cardSize={140} paused={paused} />
+            <OrbitRing items={OUTER_SKILLS} radius={650} tiltDeg={18} speed={11} iconSize={60} cardSize={140} />
             {/* Inner ring — 9 skills, faster, reverse */}
-            <OrbitRing items={INNER_SKILLS} radius={400} tiltDeg={18} speed={19} iconSize={64} cardSize={140} reverse paused={paused} />
+            <OrbitRing items={INNER_SKILLS} radius={400} tiltDeg={18} speed={19} iconSize={64} cardSize={140} reverse />
           </div>
         </div>
 
       </div>
 
       {/* ── Category legend ── */}
-      <div className="mt-8 flex flex-wrap justify-center gap-x-6 gap-y-3">
+      {/* <div className="mt-8 flex flex-wrap justify-center gap-x-6 gap-y-3">
         {(["Frontend", "Backend", "Deployment", "Tools"] as const).map((cat) => {
           const catSkills = skills.filter((s) => s.category === cat);
           return (
@@ -241,7 +234,7 @@ export default function MySkills() {
             </div>
           );
         })}
-      </div>
+      </div> */}
     </motion.section>
   );
 }
