@@ -41,33 +41,69 @@ const skills: Skill[] = [
 ];
 
 // ── Carousel config ──────────────────────────────────────────────
-const CARD_W       = 150;   // card width  (px)
-const CARD_H       = 200;   // card height (px)
-const CARD_GAP     = 170;   // horizontal distance between card centres
+const CARD_W       = 180;   // card width  (px)
+const CARD_H       = 240;   // card height (px)
+const CARD_GAP     = 260;   // horizontal distance between card centres
 const ROTATE_Y_PER = 38;    // rotateY degrees per card position from centre
 const Z_PER        = 60;    // translateZ reduction per card position
-const VISIBLE      = 4;     // cards visible on each side of centre
-const SPEED        = 0.003; // offset units per ms
+const VISIBLE      = 5;     // cards visible on each side of centre
+const SPEED        = 0.0008; // offset units per ms
 // ─────────────────────────────────────────────────────────────────
 
 function FanCarousel() {
   const offsetRef = useRef(0);
   const [offset, setOffset] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+  const [isDragging, setIsDragging] = useState(false);
+  
+  const dragStartX = useRef(0);
+  const dragStartOffset = useRef(0);
   const n = skills.length;
 
+  const pausedRef = useRef(isPaused);
+  pausedRef.current = isPaused || isDragging;
+
   useAnimationFrame((_, delta) => {
+    if (pausedRef.current) return;
     offsetRef.current = (offsetRef.current + delta * SPEED) % n;
+    // ensure positive offset for modulo arithmetic later
+    if (offsetRef.current < 0) offsetRef.current += n;
     setOffset(offsetRef.current);
   });
+
+  const handlePointerDown = (e: React.PointerEvent) => {
+    setIsDragging(true);
+    dragStartX.current = e.clientX;
+    dragStartOffset.current = offsetRef.current;
+  };
+
+  const handlePointerMove = (e: React.PointerEvent) => {
+    if (!isDragging) return;
+    const deltaX = e.clientX - dragStartX.current;
+    // 1 offset unit = CARD_GAP pixels
+    let newOffset = dragStartOffset.current - deltaX / CARD_GAP;
+    // Keep it wrapped smoothly around the ring
+    newOffset = ((newOffset % n) + n) % n;
+    offsetRef.current = newOffset;
+    setOffset(newOffset);
+  };
+
+  const handlePointerUp = () => {
+    setIsDragging(false);
+  };
 
   return (
     /* perspective container – full viewport width */
     <div
-      className="relative select-none"
+      className={`relative select-none w-full ${isDragging ? "cursor-grabbing" : "cursor-grab"}`}
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => { setIsPaused(false); setIsDragging(false); }}
+      onPointerDown={handlePointerDown}
+      onPointerMove={handlePointerMove}
+      onPointerUp={handlePointerUp}
+      onPointerCancel={handlePointerUp}
       style={{
-        width: "100vw",
-        marginLeft: "calc(-50vw + 50%)",
-        height: CARD_H + 120,
+        height: CARD_H + 160,
         perspective: 1300,
         perspectiveOrigin: "50% 50%",
         overflow: "hidden",
@@ -138,7 +174,7 @@ function FanCarousel() {
                 {/* Icon */}
                 <div
                   style={{
-                    fontSize: 64,
+                    fontSize: 84,
                     color: skill.color,
                     filter: `drop-shadow(0 0 12px ${skill.color}cc)`,
                     lineHeight: 1,
@@ -151,7 +187,7 @@ function FanCarousel() {
                 <span
                   className="font-semibold text-center leading-tight px-2"
                   style={{
-                    fontSize: 13,
+                    fontSize: 15,
                     color: skill.color,
                     textShadow: `0 0 8px ${skill.color}aa`,
                     maxWidth: CARD_W - 12,
@@ -165,7 +201,7 @@ function FanCarousel() {
 
                 {/* Category badge */}
                 <span
-                  className="text-[9px] uppercase tracking-widest font-bold px-2 py-0.5 rounded-full"
+                  className="text-[11px] uppercase tracking-widest font-bold px-3 py-1 rounded-full"
                   style={{
                     background: `${skill.color}18`,
                     border:     `1px solid ${skill.color}44`,
