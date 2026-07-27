@@ -22,6 +22,7 @@ import {
   SiGithub,
 } from "react-icons/si";
 import { TbWebhook } from "react-icons/tb";
+import { BsServer } from "react-icons/bs";
 import { motion, useAnimationFrame } from "framer-motion";
 import Heading from "@/components/Heading";
 
@@ -50,6 +51,7 @@ const skills: Skill[] = [
   { name: "WebSocket",     icon: <TbWebhook />,        category: "Backend",    color: "#FB923C" },
   { name: "Nginx",         icon: <SiNginx />,          category: "Deployment", color: "#4ADE80" },
   { name: "PM2",           icon: <FaServer />,         category: "Deployment", color: "#9CA3AF" },
+  { name: "VPS",           icon: <BsServer />,         category: "Deployment", color: "#F472B6" },
   { name: "GitHub",        icon: <SiGithub />,         category: "Tools",      color: "#E2E8F0" },
 ];
 
