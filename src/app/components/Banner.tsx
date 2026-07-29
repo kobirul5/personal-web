@@ -16,7 +16,7 @@ const Banner = () => {
       }}
       className="lg:mt-10 z-30 container mx-auto flex flex-col-reverse pt-10 lg:flex-row  justify-end items-center gap-8"
     >
-      <div className=" flex-1 flex flex-col order-2 lg:order-0 pb-10 space-y-6 lg:space-y-10">
+      <div className="w-full lg:w-auto lg:flex-1 flex flex-col order-2 lg:order-0 pb-10 space-y-6 lg:space-y-10">
         <div>
           <DesignationText />
         <h1 className="text-4xl md:text-5xl xl:text-7xl font-bold">
@@ -49,7 +49,7 @@ const Banner = () => {
           </div>
         </div>
       </div>
-      <div className="flex-1 flex order-1 lg:order-0">
+      <div className="w-full lg:w-auto lg:flex-1 flex order-1 lg:order-0 mb-10 lg:mb-0">
         <BannerPhoto />
       </div>
     </motion.div>
