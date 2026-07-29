@@ -16,26 +16,28 @@ const Banner = () => {
       }}
       className="lg:mt-10 z-30 container mx-auto flex flex-col-reverse pt-10 lg:flex-row  justify-end items-center gap-8"
     >
-      <div className=" flex-1 flex flex-col order-2 lg:order-0 pb-10">
-        <DesignationText />
-        <h1 className="text-4xl md:text-5xl xl:text-7xl font-bold mb-6 mt-2">
+      <div className=" flex-1 flex flex-col order-2 lg:order-0 pb-10 space-y-6 lg:space-y-10">
+        <div>
+          <DesignationText />
+        <h1 className="text-4xl md:text-5xl xl:text-7xl font-bold">
           Hi, I&apos;m <br />{" "}
           <span className="text-primaryColor">Kobirul Islam</span>
         </h1>
-        <p className="mb-9">
+        </div>
+        <p className=" text-lg lg:text-xl text-gray-700 dark:text-gray-300">
           I&apos;m a{" "}
           <span className="text-primaryColor font-semibold">
             Full Stack Developer
           </span>{" "}
           specializing in building scalable backend APIs with Node.js, Express.js
-          & TypeScript, and modern frontends with React.js & Next.js. Currently
-          working as a{" "}
+          & TypeScript, and modern frontends with React.js & Next.js.
+          Currently working as a{" "}
           <span className="text-primaryColor font-semibold">
             Backend Developer at SM Technology
           </span>
           .
         </p>
-        <div className="space-y-5">
+        <div className="space-y-5 pt-2 pb">
           <a href="/Resume_of_Kobirul.pdf" download="Resume_Of_Kobirul">
             <Button variant="outline" size="lg">
               <span>Download CV</span>
