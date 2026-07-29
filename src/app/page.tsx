@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import Banner from "./components/Banner";
 import MySkills from "./components/MySkills";
+import GithubCalendarSection from "./components/GithubCalendarSection";
 import Projects from "./projects/Projects";
 import Link from "next/link";
 import Education from "@/components/Education/Education";
@@ -26,6 +27,9 @@ export default function Home() {
       <div className="px-5">
         <section className="text-center mb10 ">
           <MySkills></MySkills>
+        </section>
+        <section className="mb-10">
+          <GithubCalendarSection />
         </section>
         <section className="relative">
           <div className="absolute top-0 right-0 w-100 h-100 z-[-1] bg-primaryColor/50 rounded-[50px] blur-[100px] opacity-40 animate-pulse"></div>
