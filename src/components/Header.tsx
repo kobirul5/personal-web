@@ -32,7 +32,7 @@ export default function Header() {
           className="group relative logo-font cursor-pointer text-lg font-semibold uppercase tracking-[0.4em] text-primaryColor"
         >
           Kobirul
-          <span className="absolute -bottom-0.5 left-0 h-[2px] w-0 bg-primaryColor transition-all duration-300 group-hover:w-full rounded-full" />
+          <span className="absolute -bottom-0.5 left-0 h-0.5 w-0 bg-primaryColor transition-all duration-300 group-hover:w-full rounded-full" />
         </Link>
 
         {/* Desktop Nav */}

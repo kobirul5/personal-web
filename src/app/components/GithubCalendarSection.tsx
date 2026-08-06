@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react";
 import { GitHubCalendar } from "react-github-calendar";
 import Heading from "@/components/Heading";
-import { Flame, Target, BookMarked, Code2 } from "lucide-react";
+import { Flame, Target, BookMarked, Code2, ChevronDown } from "lucide-react";
 
 interface GithubStats {
   totalContributions: number;
@@ -15,6 +15,11 @@ interface GithubStats {
 const GithubCalendarSection = () => {
   const [theme, setTheme] = useState<"light" | "dark">("dark");
   const [stats, setStats] = useState<GithubStats | null>(null);
+  
+  const currentYear = new Date().getFullYear();
+  const years = [currentYear, currentYear - 1, currentYear - 2, currentYear - 3];
+  const [selectedYear, setSelectedYear] = useState<number | "last">("last");
+  const [yearContributions, setYearContributions] = useState<number>(0);
 
   useEffect(() => {
     // Theme observer logic
@@ -95,6 +100,27 @@ const GithubCalendarSection = () => {
     fetchGithubStats();
   }, []);
 
+  useEffect(() => {
+    const fetchYearStats = async () => {
+      try {
+        const res = await fetch(`https://github-contributions-api.jogruber.de/v4/kobirul5?y=${selectedYear}`);
+        const data = await res.json();
+        
+        let count = 0;
+        if (selectedYear === "last") {
+          count = data?.total?.lastYear || 0;
+        } else {
+          count = data?.total?.[selectedYear] || 0;
+        }
+        setYearContributions(count);
+      } catch (error) {
+        console.error("Failed to fetch year stats", error);
+      }
+    };
+
+    fetchYearStats();
+  }, [selectedYear]);
+
   // Custom orange theme to match the primaryColor (#ff6421)
   const customTheme = {
     light: ["#f1f5f9", "#ffd8c8", "#ffb291", "#ff8b5a", "#ff6421"],
@@ -111,7 +137,7 @@ const GithubCalendarSection = () => {
 
       <div className="w-full max-w-7xl mx-auto mt-12 relative group">
         {/* Card Container */}
-        <div className="relative w-full bg-background/60 backdrop-blur-2xl border border-border/50 p-6 md:p-10 rounded-[32px] flex flex-col items-center justify-center">
+        <div className="relative w-full bg-background/60 backdrop-blur-2xl border border-border/50 p-6 md:p-10 rounded-4xl flex flex-col items-center justify-center">
           
           {/* GitHub Live Stats */}
           {stats && (
@@ -150,17 +176,49 @@ const GithubCalendarSection = () => {
             </div>
           )}
 
-          {/* GitHub Calendar */}
-          <div className="w-full overflow-x-auto pb-2 scrollbar-thin scrollbar-thumb-primaryColor/20 scrollbar-track-transparent">
-            <div className="min-w-max flex justify-center">
-              <GitHubCalendar
-                username="kobirul5"
-                colorScheme={theme}
-                theme={customTheme}
-                blockSize={15}
-                blockMargin={5}
-                fontSize={14}
-              />
+          {/* GitHub Calendar Container */}
+          <div className="w-full flex flex-col xl:flex-row gap-6 mt-8">
+            {/* Calendar & Header */}
+            <div className="flex-1 border border-border/50 rounded-xl p-4 md:p-6 bg-background/40">
+              <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 gap-4">
+                <span className="text-foreground text-sm md:text-base font-medium">
+                  {yearContributions.toLocaleString()} contributions in {selectedYear === "last" ? "the last year" : selectedYear}
+                </span>
+                <button className="text-xs md:text-sm text-foreground/70 hover:text-foreground flex items-center gap-1 transition-colors">
+                  Contribution settings <ChevronDown size={14} />
+                </button>
+              </div>
+              <div className="w-full overflow-x-auto pb-2 scrollbar-thin scrollbar-thumb-primaryColor/20 scrollbar-track-transparent">
+                <div className="min-w-max flex justify-center">
+                  <GitHubCalendar
+                    username="kobirul5"
+                    colorScheme={theme}
+                    theme={customTheme}
+                    blockSize={15}
+                    blockMargin={5}
+                    fontSize={14}
+                    year={selectedYear}
+                    showTotalCount={false}
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Year Selector */}
+            <div className="flex flex-row xl:flex-col gap-2 overflow-x-auto pb-2 xl:pb-0 scrollbar-none">
+              {years.map((y) => (
+                <button
+                  key={y}
+                  onClick={() => setSelectedYear(y)}
+                  className={`px-4 md:px-5 py-2 md:py-2.5 rounded-lg text-sm text-left whitespace-nowrap transition-all ${
+                    selectedYear === y || (selectedYear === "last" && y === currentYear)
+                      ? "bg-primaryColor text-white font-medium shadow-md shadow-primaryColor/20"
+                      : "text-foreground hover:bg-foreground/5"
+                  }`}
+                >
+                  {y}
+                </button>
+              ))}
             </div>
           </div>
           

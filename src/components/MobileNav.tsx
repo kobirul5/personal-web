@@ -31,7 +31,7 @@ const MobileNav = () => {
         {open ? <X size={18} /> : <Menu size={18} />}
       </SheetTrigger>
 
-      <SheetContent side="right" className="w-[280px] p-0 border-l border-border/50">
+      <SheetContent side="right" className="w-70 p-0 border-l border-border/50">
         <div className="flex flex-col h-full bg-background/95 backdrop-blur-2xl">
           {/* Header */}
           <div className="flex items-center justify-center py-12 px-6 border-b border-border/30">
