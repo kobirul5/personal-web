@@ -17,7 +17,7 @@ const GithubCalendarSection = () => {
   const [stats, setStats] = useState<GithubStats | null>(null);
   
   const currentYear = new Date().getFullYear();
-  const years = [currentYear, currentYear - 1, currentYear - 2, currentYear - 3];
+  const [years, setYears] = useState<number[]>([currentYear]);
   const [selectedYear, setSelectedYear] = useState<number | "last">("last");
   const [yearContributions, setYearContributions] = useState<number>(0);
 
@@ -50,15 +50,29 @@ const GithubCalendarSection = () => {
     // Fetch Github Stats for Calendar (Total Contributions, Streak, Repos, Top Language)
     const fetchGithubStats = async () => {
       try {
-        const [contributionsRes, userRes, reposRes] = await Promise.all([
+        const [contributionsRes, userRes, reposRes, allYearsRes] = await Promise.all([
           fetch("https://github-contributions-api.jogruber.de/v4/kobirul5?y=last"),
           fetch("https://api.github.com/users/kobirul5"),
-          fetch("https://api.github.com/users/kobirul5/repos?per_page=100")
+          fetch("https://api.github.com/users/kobirul5/repos?per_page=100"),
+          fetch("https://github-contributions-api.jogruber.de/v4/kobirul5")
         ]);
         
         const data = await contributionsRes.json();
         const userData = await userRes.json();
         const reposData = await reposRes.json();
+        const allYearsData = await allYearsRes.json();
+
+        if (allYearsData && allYearsData.total) {
+          const availableYears = Object.keys(allYearsData.total)
+            .filter((key) => key !== "lastYear")
+            .map(Number)
+            .filter((num) => !isNaN(num))
+            .sort((a, b) => b - a);
+
+          if (availableYears.length > 0) {
+            setYears(availableYears);
+          }
+        }
         
         // Calculate Longest Streak
         let currentStreak = 0;
@@ -129,6 +143,21 @@ const GithubCalendarSection = () => {
 
   return (
     <div className="flex flex-col items-center justify-center w-full my-20 overflow-hidden px-4 md:px-0">
+      <style>{`
+        .react-activity-calendar__tooltip {
+          background-color: #ff6421 !important;
+          color: #fff !important;
+          border-radius: 6px !important;
+          padding: 6px 10px !important;
+          font-size: 13px !important;
+          font-weight: 500 !important;
+          box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.3) !important;
+          z-index: 50 !important;
+        }
+        .react-activity-calendar__tooltip-arrow {
+          fill: #ff6421 !important;
+        }
+      `}</style>
       <Heading
         subTitle="Contributions & Stats"
         title1="My Github"
@@ -199,6 +228,19 @@ const GithubCalendarSection = () => {
                     fontSize={14}
                     year={selectedYear}
                     showTotalCount={false}
+                    tooltips={{
+                      activity: {
+                        text: (activity) => {
+                          const date = new Date(activity.date);
+                          const formattedDate = date.toLocaleDateString("en-US", { 
+                            month: "short", 
+                            day: "numeric", 
+                            year: "numeric" 
+                          });
+                          return `${activity.count} contribution${activity.count !== 1 ? 's' : ''} on ${formattedDate}`;
+                        },
+                      },
+                    }}
                   />
                 </div>
               </div>
