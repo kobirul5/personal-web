@@ -23,9 +23,9 @@ const Heading: React.FC<HeadingProps> = ({subTitle, title1, title2}) => {
       <div className="inline-flex flex-col items-center">
         <span className="text-sm font-medium text-primaryColor mb-3 tracking-widest">{subTitle}</span>
         <h2 className="text-4xl md:text-6xl font-bold tracking-tight">
-          <span className="bg-clip-text text-transparent bg-gradient-to-r from-primaryColor to-primaryColor/70">{title1}</span> {title2}
+          <span className="bg-clip-text text-transparent bg-linear-to-r from-primaryColor to-primaryColor/70">{title1}</span> {title2}
         </h2>
-        <div className="w-24 h-1 bg-gradient-to-r from-primaryColor to-transparent mt-6 rounded-full"></div>
+        <div className="w-24 h-1 bg-linear-to-r from-primaryColor to-transparent mt-6 rounded-full"></div>
       </div>
     </motion.div>
   )
