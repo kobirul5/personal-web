@@ -186,7 +186,7 @@ export const projects: Project[] = [
       "Responsive design for mobile, tablet, and desktop",
     ],
     image: "https://i.ibb.co/1tvQzvBZ/ezyticket.jpg",
-    link: "https://ezyticket-7198b.web.app/",
+    link: "https://ezy-ticket-drab.vercel.app/",
     github_client: "https://github.com/kobirul5/ezy-ticket-client",
     github_server: "https://github.com/kobirul5/ezy-ticket-server",
     admin_email: "admin@example.com",
