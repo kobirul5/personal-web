@@ -101,15 +101,21 @@ export default function ShatterImage({
 
   const boxes = useMemo(() => {
     const tempBoxes = [];
+    const pseudoRandom = (seed: number) => {
+      const x = Math.sin(seed * 9999) * 10000;
+      return x - Math.floor(x);
+    };
+
     for (let i = 0; i < rows; i++) {
       for (let j = 0; j < cols; j++) {
+        const index = i * cols + j + 1;
         tempBoxes.push({
           id: `${i}-${j}`,
           row: i,
           col: j,
-          // Small random values for a slight jagged pixel effect at the edges
-          randomX: Math.random() * 2 - 1,
-          randomY: Math.random() * 2 - 1,
+          // Deterministic values for a slight jagged pixel effect at the edges without breaking hydration
+          randomX: pseudoRandom(index) * 2 - 1,
+          randomY: pseudoRandom(index * 13) * 2 - 1,
         });
       }
     }
